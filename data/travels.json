@@ -1,0 +1,72 @@
+[
+  {
+    "id": "calamba",
+    "place": "Calamba",
+    "country": "Philippines",
+    "lat": 14.2128,
+    "lng": 121.1653,
+    "dateRange": "1861-1882",
+    "story": "Rizal's hometown where his upbringing, early education, and family struggles shaped his sense of justice.",
+    "notes": "Now home to the Rizal Shrine museum."
+  },
+  {
+    "id": "manila",
+    "place": "Manila",
+    "country": "Philippines",
+    "lat": 14.5995,
+    "lng": 120.9842,
+    "dateRange": "1872-1882",
+    "story": "Studied at Ateneo Municipal and the University of Santo Tomas; experienced racial discrimination that prompted his move abroad.",
+    "notes": "Sites include Intramuros and the old University campus."
+  },
+  {
+    "id": "madrid",
+    "place": "Madrid",
+    "country": "Spain",
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "dateRange": "1882-1885",
+    "story": "Pursued medicine and letters at Universidad Central de Madrid while engaging with the Propaganda Movement.",
+    "notes": "Residences along Calle Amor de Dios and Calle Atocha."
+  },
+  {
+    "id": "paris",
+    "place": "Paris",
+    "country": "France",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "dateRange": "1885-1886",
+    "story": "Trained in ophthalmology under Dr. Louis de Weckert; organized compatriots and co-founded the society Indios Bravos.",
+    "notes": "Visited the Bibliothèque Nationale and Musée du Louvre for research."
+  },
+  {
+    "id": "heidelberg",
+    "place": "Heidelberg",
+    "country": "Germany",
+    "lat": 49.3988,
+    "lng": 8.6724,
+    "dateRange": "1886",
+    "story": "Completed ophthalmology specialization with Professor Otto Becker and wrote the poem 'A Las Flores de Heidelberg'.",
+    "notes": "Strolled along the Philosophenweg overlooking the Neckar River."
+  },
+  {
+    "id": "london",
+    "place": "London",
+    "country": "United Kingdom",
+    "lat": 51.5072,
+    "lng": -0.1276,
+    "dateRange": "1888-1889",
+    "story": "Researched Philippine history at the British Museum and annotated Antonio de Morga's 'Sucesos de las Islas Filipinas'.",
+    "notes": "Lodged at 37 Chalcot Crescent in Primrose Hill."
+  },
+  {
+    "id": "dapitan",
+    "place": "Dapitan",
+    "country": "Philippines",
+    "lat": 8.6523,
+    "lng": 123.4227,
+    "dateRange": "1892-1896",
+    "story": "Exiled by the Spanish colonial government; established a school, hospital, water system, and community projects.",
+    "notes": "Declared a national heritage zone featuring the Casa Real and Talisay estate."
+  }
+]

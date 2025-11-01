@@ -1,0 +1,98 @@
+[
+  {
+    "id": "q1",
+    "question": "Which of the following best describes the central goal of Rizal's La Liga Filipina?",
+    "options": [
+      {
+        "id": "a",
+        "label": "To prepare an armed force that would launch an immediate revolution",
+        "explanation": "Rizal advocated civic reforms rather than an instant uprising."
+      },
+      {
+        "id": "b",
+        "label": "To create a civic society that promoted mutual protection, education, and reform",
+        "explanation": "La Liga Filipina envisioned a network of mutual aid and civic engagement."
+      },
+      {
+        "id": "c",
+        "label": "To replace the Katipunan leadership with ilustrados",
+        "explanation": "La Liga predated the Katipunan and focused on reforms."
+      }
+    ],
+    "answer": "b",
+    "category": "Organizations",
+    "reference": "Rizal, J. (1892). Statutes of La Liga Filipina."
+  },
+  {
+    "id": "q2",
+    "question": "Where did Rizal complete his ophthalmology specialization under Professor Otto Becker?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Madrid, Spain",
+        "explanation": "He pursued general medicine in Madrid."
+      },
+      {
+        "id": "b",
+        "label": "Heidelberg, Germany",
+        "explanation": "Rizal trained under Dr. Otto Becker in Heidelberg in 1886."
+      },
+      {
+        "id": "c",
+        "label": "Paris, France",
+        "explanation": "Paris was for clinical observations with Dr. de Weckert."
+      }
+    ],
+    "answer": "b",
+    "category": "Travels",
+    "reference": "Zaide, G. (1999). José Rizal: Life, Works, and Writings."
+  },
+  {
+    "id": "q3",
+    "question": "Which character transformation connects Rizal's Noli Me Tángere and El Filibusterismo?",
+    "options": [
+      {
+        "id": "a",
+        "label": "Elias becomes Crisóstomo Ibarra",
+        "explanation": "Elias dies in Noli's final chapters."
+      },
+      {
+        "id": "b",
+        "label": "María Clara adopts the identity of Simoun",
+        "explanation": "María Clara enters a convent at the end of Noli."
+      },
+      {
+        "id": "c",
+        "label": "Crisóstomo Ibarra returns as Simoun",
+        "explanation": "Simoun is Ibarra in disguise, plotting revolutionary vengeance."
+      }
+    ],
+    "answer": "c",
+    "category": "Works",
+    "reference": "Rizal, J. (1891). El Filibusterismo."
+  },
+  {
+    "id": "q4",
+    "question": "What reform did Rizal and fellow students advocate through the 1880s petition that appears in the timeline?",
+    "options": [
+      {
+        "id": "a",
+        "label": "The establishment of a lay-run agricultural bank",
+        "explanation": "This was proposed later by other ilustrados."
+      },
+      {
+        "id": "b",
+        "label": "The creation of a Spanish language academy in Manila",
+        "explanation": "Students sought access to Spanish education as a pathway to civic participation."
+      },
+      {
+        "id": "c",
+        "label": "Universal suffrage for Filipino taxpayers",
+        "explanation": "While reforms for representation were discussed, the petition focused on language instruction."
+      }
+    ],
+    "answer": "b",
+    "category": "Education",
+    "reference": "La Solidaridad, 1889 issues."
+  }
+]

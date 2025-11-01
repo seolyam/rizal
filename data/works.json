@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "noli-me-tangere",
+    "title": "Noli Me Tángere",
+    "year": 1887,
+    "type": "Novel",
+    "tags": ["fiction", "reform", "satire"],
+    "excerpt": "A sweeping social novel exposing the injustices of colonial Philippine society through memorable characters such as Crisóstomo Ibarra and María Clara."
+  },
+  {
+    "slug": "el-filibusterismo",
+    "title": "El Filibusterismo",
+    "year": 1891,
+    "type": "Novel",
+    "tags": ["fiction", "revolution", "critique"],
+    "excerpt": "A darker sequel to Noli that follows the vengeful Simoun and argues for systemic reform amid mounting revolutionary fervor."
+  },
+  {
+    "slug": "mi-ultimo-adios",
+    "title": "Mi Último Adiós",
+    "year": 1896,
+    "type": "Poem",
+    "tags": ["poetry", "martyrdom"],
+    "excerpt": "Rizal's farewell poem composed on the eve of his execution, invoking love of country, sacrifice, and hope for liberation."
+  },
+  {
+    "slug": "la-indolencia",
+    "title": "La Indolencia de los Filipinos",
+    "year": 1890,
+    "type": "Essay",
+    "tags": ["essay", "economy"],
+    "excerpt": "A serialized essay in La Solidaridad arguing that Filipino indolence stems from colonial policies, forced labor, and climate, not innate laziness."
+  },
+  {
+    "slug": "annotation-morga",
+    "title": "Annotations to Antonio de Morga's Sucesos de las Islas Filipinas",
+    "year": 1890,
+    "type": "Historical Commentary",
+    "tags": ["history", "scholarship"],
+    "excerpt": "Rizal's meticulous annotations reclaim Filipino agency by highlighting precolonial achievements erased from colonial narratives."
+  }
+]

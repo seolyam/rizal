@@ -1,0 +1,30 @@
+[
+  {
+    "id": "calamba-house",
+    "title": "Rizal Ancestral House",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Rizal_Shrine_2016.jpg",
+    "caption": "The Bahay na Bato in Calamba where Rizal spent his childhood, now preserved as a national shrine.",
+    "credit": "National Historical Commission of the Philippines"
+  },
+  {
+    "id": "dapitan-shrine",
+    "title": "Dapitan Shrine",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/Jose_Rizal_Shrine_in_Dapitan.jpg",
+    "caption": "Replica structures in Dapitan illustrating Rizal's exile estate and civic projects from 1892 to 1896.",
+    "credit": "Dapitan City Tourism"
+  },
+  {
+    "id": "mi-ultimo-manuscript",
+    "title": "Mi Último Adiós Manuscript",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Ultimo_adios_rizal.jpg",
+    "caption": "Facsimile of Rizal's farewell poem, hidden in an alcohol stove and recovered after his execution.",
+    "credit": "National Library of the Philippines"
+  },
+  {
+    "id": "luneta-monument",
+    "title": "Luneta Monument",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/PHOT0873.JPG",
+    "caption": "The Rizal Monument in Luneta Park, unveiled in 1913, honoring his martyrdom and national hero status.",
+    "credit": "Wikimedia Commons"
+  }
+]

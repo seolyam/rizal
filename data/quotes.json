@@ -1,0 +1,38 @@
+[
+  {
+    "id": "youth-hope",
+    "quote": "The youth is the hope of our future.",
+    "source": "Speech at a banquet in honor of Juan Luna and Félix Resurrección Hidalgo",
+    "year": 1884
+  },
+  {
+    "id": "pen-sword",
+    "quote": "I have to believe much in God because I have lost my faith in man.",
+    "source": "Letter to Mariano Ponce",
+    "year": 1890
+  },
+  {
+    "id": "ideas-fire",
+    "quote": "The glory of saving a country is not for him who has contributed to its ruin.",
+    "source": "El Filibusterismo",
+    "year": 1891
+  },
+  {
+    "id": "education",
+    "quote": "He who does not know how to look back at where he came from will never get to his destination.",
+    "source": "Rizal's essays on education",
+    "year": 1889
+  },
+  {
+    "id": "truth",
+    "quote": "Virtue lies in the middle ground.",
+    "source": "Letter to his family",
+    "year": 1884
+  },
+  {
+    "id": "freedom-ink",
+    "quote": "I die without seeing the dawn brighten over my native land. You who have it to see, welcome it for me.",
+    "source": "Mi Último Adiós",
+    "year": 1896
+  }
+]
