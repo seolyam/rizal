@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { GalleryGrid } from "@/components/gallery/gallery-grid";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { getGallery } from "@/lib/data";

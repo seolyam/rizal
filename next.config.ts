@@ -1,8 +1,8 @@
-﻿import type { NextConfig } from "next";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  typedRoutes: true,
   experimental: {
-    typedRoutes: true,
     mdxRs: true,
     optimizePackageImports: ["lucide-react"],
   },
@@ -22,4 +22,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-

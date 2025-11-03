@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Timeline } from "@/components/timeline/timeline";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { getTimeline } from "@/lib/data";

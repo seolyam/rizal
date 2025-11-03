@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { TravelMap } from "@/components/travels/travel-map";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { getTravels } from "@/lib/data";

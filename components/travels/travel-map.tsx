@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 
 import { geoMercator, geoPath } from "d3-geo";
 import { motion } from "framer-motion";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import type { TravelSpot } from "@/lib/schemas";
@@ -17,7 +17,7 @@ type TravelMapProps = {
 };
 
 export function TravelMap({ spots }: TravelMapProps) {
-  const [active, setActive] = useState<TravelSpot | null>(spots[0] ?? null);
+  const [active, setActive] = useState<TravelSpot | null>(null);
   const { prefersReducedMotion } = usePreferencesStore();
 
   const projection = useMemo(() => {
@@ -26,70 +26,128 @@ export function TravelMap({ spots }: TravelMapProps) {
 
   const pathGenerator = useMemo(() => geoPath().projection(projection), [projection]);
 
+  const viewTarget = useMemo(() => {
+    if (prefersReducedMotion || !active) {
+      return { x: 0, y: 0, scale: 1 };
+    }
+    const coordinates = projection([active.lng, active.lat]);
+    if (!coordinates) {
+      return { x: 0, y: 0, scale: 1 };
+    }
+    const [x, y] = coordinates;
+    const offsetX = MAP_WIDTH / 2 - x;
+    const offsetY = MAP_HEIGHT / 2 - y;
+    return { x: offsetX, y: offsetY, scale: 1.22 };
+  }, [active, prefersReducedMotion, projection]);
+
+  const activeCoordinates = useMemo(() => {
+    if (!active) return null;
+    const coords = projection([active.lng, active.lat]);
+    if (!coords) return null;
+    return { x: coords[0], y: coords[1] };
+  }, [active, projection]);
+
+  const handleActivate = useCallback((spot: TravelSpot) => {
+    setActive(spot);
+  }, []);
+
   return (
     <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
-      <div className="rounded-3xl border border-border/60 bg-card p-6 shadow-soft">
+      <div className="paper-surface grain-overlay rounded-3xl border border-border/60 p-6 shadow-soft">
         <svg
           viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
           role="img"
-          aria-label={"World map showing the travels of Jos\u00e9 Rizal"}
-          className="w-full"
+          aria-label={
+            active
+              ? `World map focused on ${active.place}, ${active.country}`
+              : "World map for Rizal's journeys. Select a location card to reveal pins."
+          }
+          className="w-full rounded-[30px] border border-border/40 bg-parchment/80"
         >
           <defs>
             <radialGradient id="pinGradient" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stopColor="#7a2e3b" />
               <stop offset="100%" stopColor="#7a2e3b" stopOpacity="0.3" />
             </radialGradient>
+            <radialGradient id="haloGradient" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="rgba(59, 128, 112, 0.45)" />
+              <stop offset="100%" stopColor="rgba(59, 128, 112, 0)" />
+            </radialGradient>
           </defs>
-          <rect width={MAP_WIDTH} height={MAP_HEIGHT} fill="url(#pinGradient)" opacity="0.05" />
-          <g className="fill-border/40 stroke-border/80">
-            {worldFeatures.map((feature, index) => (
-              <path
-                key={index}
-                d={pathGenerator(feature) ?? ""}
-                fill="rgba(35,31,32,0.06)"
-                stroke="rgba(35,31,32,0.18)"
-                strokeWidth={0.5}
-              />
-            ))}
-          </g>
-          <g>
-            {spots.map((spot) => {
-              const coordinates = projection([spot.lng, spot.lat]);
-              if (!coordinates) return null;
-              const [x, y] = coordinates;
-              const isActive = active?.id === spot.id;
-              return (
-                <g key={spot.id}>
+          <rect width={MAP_WIDTH} height={MAP_HEIGHT} fill="url(#pinGradient)" opacity="0.08" />
+          <motion.g
+            animate={
+              prefersReducedMotion
+                ? { x: 0, y: 0, scale: 1 }
+                : {
+                    x: viewTarget.x,
+                    y: viewTarget.y,
+                    scale: viewTarget.scale,
+                  }
+            }
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <g className="fill-border/40 stroke-border/80">
+              {worldFeatures.map((feature, index) => (
+                <path
+                  key={index}
+                  d={pathGenerator(feature) ?? ""}
+                  fill="rgba(35,31,32,0.06)"
+                  stroke="rgba(35,31,32,0.18)"
+                  strokeWidth={0.5}
+                />
+              ))}
+            </g>
+            {active && activeCoordinates ? (
+              <g key={active.id}>
+                {!prefersReducedMotion ? (
                   <motion.circle
-                    cx={x}
-                    cy={y}
-                    r={isActive ? 7 : 5}
-                    fill={isActive ? "#3b8070" : "#7a2e3b"}
-                    className="cursor-pointer"
-                    initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.8 }}
-                    animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                    onMouseEnter={() => setActive(spot)}
-                    onFocus={() => setActive(spot)}
-                    onClick={() => setActive(spot)}
-                    tabIndex={0}
-                    role="button"
-                    aria-pressed={isActive}
-                    aria-label={`${spot.place}, ${spot.country}`}
+                    cx={activeCoordinates.x}
+                    cy={activeCoordinates.y}
+                    r={0}
+                    fill="url(#haloGradient)"
+                    initial={{ r: 0, opacity: 0.18 }}
+                    animate={{ r: 28, opacity: 0 }}
+                    transition={{ duration: 1.6, ease: "easeOut", repeat: Infinity }}
+                    aria-hidden
                   />
-                  <text
-                    x={x + 10}
-                    y={y - 10}
-                    className="text-xs font-medium text-foreground drop-shadow-sm"
-                  >
-                    {spot.place}
-                  </text>
-                </g>
-              );
-            })}
-          </g>
+                ) : null}
+                <motion.circle
+                  cx={activeCoordinates.x}
+                  cy={activeCoordinates.y}
+                  r={7}
+                  fill="#3b8070"
+                  className="cursor-pointer"
+                  initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.6 }}
+                  animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                  onMouseEnter={() => handleActivate(active)}
+                  onFocus={() => handleActivate(active)}
+                  onClick={() => handleActivate(active)}
+                  tabIndex={0}
+                  role="button"
+                  aria-pressed="true"
+                  aria-label={`${active.place}, ${active.country}`}
+                />
+                <motion.text
+                  x={activeCoordinates.x + 12}
+                  y={activeCoordinates.y - 12}
+                  className="text-xs font-medium text-foreground drop-shadow-sm"
+                  initial={prefersReducedMotion ? undefined : { opacity: 0, y: 6 }}
+                  animate={prefersReducedMotion ? undefined : { opacity: 1, y: -2 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  {active.place}
+                </motion.text>
+              </g>
+            ) : null}
+          </motion.g>
         </svg>
+        {!active ? (
+          <div className="mt-4 rounded-2xl border border-primary/30 bg-primary/5 px-6 py-4 font-serif text-lg text-primary">
+            Select a journey card to illuminate Rizal&apos;s path across the map.
+          </div>
+        ) : null}
       </div>
       <div className="space-y-4">
         {spots.map((spot) => {
@@ -97,16 +155,16 @@ export function TravelMap({ spots }: TravelMapProps) {
           return (
             <button
               key={spot.id}
-              onMouseEnter={() => setActive(spot)}
-              onFocus={() => setActive(spot)}
-              onClick={() => setActive(spot)}
+              onMouseEnter={() => handleActivate(spot)}
+              onFocus={() => handleActivate(spot)}
+              onClick={() => handleActivate(spot)}
               className="w-full text-left"
             >
               <Card
                 className={
                   isActive
-                    ? "border-secondary/60 bg-secondary/10 text-foreground"
-                    : "bg-card"
+                    ? "paper-surface border-secondary/70 bg-secondary/10 text-foreground shadow-soft supports-hover:hover:border-secondary"
+                    : "paper-surface border-border/60 bg-card"
                 }
               >
                 <CardHeader className="flex flex-col gap-2">
@@ -130,8 +188,13 @@ export function TravelMap({ spots }: TravelMapProps) {
             </button>
           );
         })}
+        {!active ? (
+          <p className="rounded-2xl border border-border/60 bg-card/70 p-4 text-sm text-muted-foreground">
+            Hint: begin with Calamba or Manila to see how his first voyages shaped the journeys that
+            followed.
+          </p>
+        ) : null}
       </div>
     </div>
   );
 }
-

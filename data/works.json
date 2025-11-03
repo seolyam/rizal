@@ -1,11 +1,11 @@
 [
   {
     "slug": "noli-me-tangere",
-    "title": "Noli Me Tángere",
+    "title": "Noli Me TÃ¡ngere",
     "year": 1887,
     "type": "Novel",
     "tags": ["fiction", "reform", "satire"],
-    "excerpt": "A sweeping social novel exposing the injustices of colonial Philippine society through memorable characters such as Crisóstomo Ibarra and María Clara."
+    "excerpt": "A sweeping social novel exposing the injustices of colonial Philippine society through memorable characters such as CrisÃ³stomo Ibarra and MarÃ­a Clara."
   },
   {
     "slug": "el-filibusterismo",
@@ -17,7 +17,7 @@
   },
   {
     "slug": "mi-ultimo-adios",
-    "title": "Mi Último Adiós",
+    "title": "Mi Ãšltimo AdiÃ³s",
     "year": 1896,
     "type": "Poem",
     "tags": ["poetry", "martyrdom"],

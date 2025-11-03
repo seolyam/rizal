@@ -1,4 +1,4 @@
-﻿import { ParallaxHero } from "@/components/sections/parallax-hero";
+import { ParallaxHero } from "@/components/sections/parallax-hero";
 import { MotionSection } from "@/components/sections/motion-section";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Timeline } from "@/components/timeline/timeline";

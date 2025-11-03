@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { getCitations } from "@/lib/sources";
 

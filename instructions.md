@@ -1,5 +1,65 @@
 # 🎓 Jose Rizal Tribute Website — Full Technical Documentation
 
+## 📌 Version Update — "Heritage Experience Enhancement" (v1.1)
+
+> Update adding historical mood, cinematic storytelling, and interactive narrative features, transforming the site from a modern portfolio feel into a **Rizalian historical experience**.
+
+### 🆕 Key Changes
+
+| Feature            | Old                   | Updated (v1.1)                                                                                  |
+| ------------------ | --------------------- | ----------------------------------------------------------------------------------------------- |
+| Map Pins           | Visible by default    | Hidden until travel card click → reveal + zoom highlight                                        |
+| Travel Interaction | Static list + pins    | "Discover Rizal's footsteps" reveal system with smooth camera pan + halo glow                   |
+| Timeline           | Long scrolling list   | Animated **journal story-cards** with next/prev transitions, parallax paper effect              |
+| Visual Tone        | Modern UI             | **Old Manila / Rizal's study aesthetic** (sepia, ink, parchment, quill motifs)                  |
+| Motion Style       | Standard Framer fades | Ink‑fade, parchment scroll, feather‑stroke accents, gentle vignette, candle‑light flicker motif |
+| Immersion          | Informational site    | Emotional literary tribute — "walking into Rizal's desk" experience                             |
+
+### 🎨 Aesthetic Upgrades
+
+- Sepia palette ● Ink accents ● Paper grain ● Subtle vignette
+- Serif + manuscript style fonts
+- Texture overlays for page depth
+- Feathers, stamps, wax seal motifs
+- Subtle ambient dust + slow parallax
+
+### 🧭 Interaction Feel
+
+- **Reveal‑based learning**: discover places one by one
+- Page‑flip feel for timeline
+- Soft zoom + warm glow on map pins
+- Ink‑stroke transitions for headings
+
+### 🎬 Motion Rules
+
+- Use slower, elegant animation — like a book opening
+- Reduce modern SaaS feel
+- Use **anticipation + fade grain** for each section
+- Respect `prefers-reduced-motion`
+
+### 🧪 UX Outcomes
+
+- Immersive historical environment
+- Students feel _inside Rizal's journey_
+- Presentation feels like **published museum software**, not a starter template
+
+### 📁 Implementation Notes
+
+- Add `vintage-theme.css` utility layer (grain, sepia filter, texture overlays)
+- Create `InkReveal` + `PageTurn` motion presets
+- Map system upgrade → imperative pin reveal + camera motion
+- Replace timeline grid → **Card Chronicle Component**
+
+### 🎤 Presentation Notes
+
+This isn't only a web project.
+This is an **interactive Rizal museum experience**.
+You don’t scroll through history — you **turn its pages**.
+You don’t see pins — you **discover Rizal’s path**.
+You don’t read facts — you **step into his world**.
+
+---
+
 **Stack**: Next.js (App Router) • TypeScript • Tailwind CSS • shadcn/ui • Framer Motion • MDX • Zustand • (Optional) React Three Fiber • (Optional) Lottie • (Optional) FlexSearch • ESLint/Prettier/Vitest/Playwright • Vercel
 
 > Goal: Build a **creative, performant, and accessible** website that celebrates Dr. José Rizal—his life, works, ideas, travels, and legacy—through **interactive storytelling** and **polished animations** without using a backend database.
@@ -99,6 +159,68 @@
 - **MDX**: rich content with React components inside.
 - **Zustand**: tiny, flexible global store (theme, quiz state, UI prefs).
 - **Optional**: FlexSearch/Lunr for client‑side search index of works/quotes.
+
+---
+
+## ✨ UX Enhancements for Rizal Feel
+
+### 🎒 Travels Map Interaction Upgrade
+
+- **Pins hidden by default** to create mystery and discovery (like tracing Rizal's journey yourself)
+- When a **travel card is clicked**:
+  - The corresponding **pin appears** on the map
+  - Map **pans & zooms slightly** to the pin location
+  - **Soft vintage glow highlight** around the pin
+  - Brief **fade‑in annotation** (place, year, purpose)
+
+**Rationale:** evokes exploration — like uncovering Rizal's footsteps across the world.
+
+### 🗺️ Map Card Layout Fix
+
+- Map card will **only scale to the map content height** (no oversized container)
+- Keeps visual consistency and reduces wasted space
+
+### 📜 Timeline Interaction Upgrade (Story Card Carousel)
+
+Instead of long scroll:
+
+- **One era card visible at a time** (carousel-like progression)
+- **Animated card transition** — floats in, replaces previous card
+- Keyboard / button navigation:
+  - `Next →` moves to next era (e.g., _1861 → 1877 → 1882..._)
+  - Smooth **flip/slide or parallax card animation**
+  - Progress indicator (dots or thin bar)
+
+**Effect:** feels like flipping through pages of Rizal's life journal.
+
+### 🎨 Aesthetic Direction — "Old Manila / Spanish‑Era Scholarly Journal"
+
+- Aged paper textures
+- Ink‑stroke dividers
+- Feather quill iconography
+- Sepia & parchment palette
+- Border embossing / subtle noise film grain
+- Gentle vignette
+- Scroll scratches & subtle flicker animations
+- Typography: serif headline + classic book body font
+- **Sound optional:** subtle page‑flip or quill scratch SFX
+
+### 🎭 Animation Guidance
+
+Soft, elegant motion — not modern SaaS style.
+
+- Fading parchment transitions
+- Slow parallax like floating paper
+- Subtle zoom on hero statue illustration
+- Hover text shimmer like ink catching candlelight
+- Delayed reveal like reading an old diary
+
+"The website should feel like walking into Rizal's study — warm lamplight, books, maps, and quiet greatness."
+
+**This is not just a tech submission — it's an emotional tribute.**
+Your animations and tone should make viewers feel:
+
+> "Rizal lived here. Rizal dreamed here."
 
 ---
 
@@ -753,14 +875,3 @@ export function TimelineView() {
 - ✅ Works & timeline are easy to navigate on mobile.
 - ✅ Quiz works offline; stores progress; gives explanations.
 - ✅ Lighthouse: Performance ≥ 90, A11y ≥ 95, Best Practices ≥ 95, SEO ≥ 95.
-
----
-
-## 27) Quick Start for Your Team
-
-1. **Clone & Install**: `pnpm i`
-2. **Run Dev**: `pnpm dev`
-3. **Create Data**: Fill `/data/*.json`, `/content/works/*.mdx`
-4. **Build Pages**: Implement tasks in Section 19.
-5. **Polish**: performance → a11y → SEO.
-6. **Deploy**: connect repo to Vercel → auto previews → final prod.

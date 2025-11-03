@@ -1,0 +1,109 @@
+:root {
+  --paper-fiber: radial-gradient(circle at 20% 20%, rgba(122, 46, 59, 0.1), transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(59, 128, 112, 0.12), transparent 55%),
+    radial-gradient(circle at 50% 80%, rgba(239, 211, 162, 0.18), transparent 60%);
+  --paper-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.7' numOctaves='3' result='turb'%3E%3C/feTurbulence%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 0.6 0' result='noise'%3E%3C/feColorMatrix%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23noise)' opacity='0.35'/%3E%3C/svg%3E");
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(35, 31, 32, 0.1) 0%, rgba(35, 31, 32, 0.55) 100%);
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+.paper-surface {
+  position: relative;
+  background-color: hsl(var(--card));
+  background-image: var(--paper-fiber);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.paper-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--paper-noise);
+  mix-blend-mode: multiply;
+  opacity: 0.35;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.ink-outline {
+  position: relative;
+}
+
+.ink-outline::before {
+  content: "";
+  position: absolute;
+  inset: 0.4rem;
+  border: 1px solid rgba(35, 31, 32, 0.18);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.65;
+  mix-blend-mode: multiply;
+}
+
+.candle-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.candle-glow::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background: radial-gradient(circle, rgba(239, 211, 162, 0.2) 0%, transparent 55%);
+  animation: candle-flicker 12s ease-in-out infinite alternate;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.grain-overlay {
+  position: relative;
+}
+
+.grain-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--paper-noise);
+  opacity: 0.25;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.vignette-soft {
+  position: relative;
+}
+
+.vignette-soft::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at center, transparent 55%, rgba(35, 31, 32, 0.35) 100%);
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+}
+
+@keyframes candle-flicker {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.08) translateY(-1%);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.98) translateY(1%);
+    opacity: 0.3;
+  }
+}

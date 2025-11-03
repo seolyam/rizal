@@ -1,4 +1,4 @@
-﻿import { Card } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { Idea, WorkSummary } from "@/lib/schemas";
 import Link from "next/link";

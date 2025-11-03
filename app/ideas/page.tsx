@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { IdeasGrid } from "@/components/ideas/ideas-grid";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { getIdeas, getWorks } from "@/lib/data";

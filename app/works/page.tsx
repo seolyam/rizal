@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { WorksExplorer } from "@/components/works/works-explorer";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { getWorks } from "@/lib/data";

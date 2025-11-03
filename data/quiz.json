@@ -45,25 +45,25 @@
     ],
     "answer": "b",
     "category": "Travels",
-    "reference": "Zaide, G. (1999). José Rizal: Life, Works, and Writings."
+    "reference": "Zaide, G. (1999). JosÃ© Rizal: Life, Works, and Writings."
   },
   {
     "id": "q3",
-    "question": "Which character transformation connects Rizal's Noli Me Tángere and El Filibusterismo?",
+    "question": "Which character transformation connects Rizal's Noli Me TÃ¡ngere and El Filibusterismo?",
     "options": [
       {
         "id": "a",
-        "label": "Elias becomes Crisóstomo Ibarra",
+        "label": "Elias becomes CrisÃ³stomo Ibarra",
         "explanation": "Elias dies in Noli's final chapters."
       },
       {
         "id": "b",
-        "label": "María Clara adopts the identity of Simoun",
-        "explanation": "María Clara enters a convent at the end of Noli."
+        "label": "MarÃ­a Clara adopts the identity of Simoun",
+        "explanation": "MarÃ­a Clara enters a convent at the end of Noli."
       },
       {
         "id": "c",
-        "label": "Crisóstomo Ibarra returns as Simoun",
+        "label": "CrisÃ³stomo Ibarra returns as Simoun",
         "explanation": "Simoun is Ibarra in disguise, plotting revolutionary vengeance."
       }
     ],

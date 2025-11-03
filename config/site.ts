@@ -14,6 +14,6 @@ export const siteConfig = {
   social: {
     email: "hello@rizaltribute.ph",
   },
-};
+} as const;
 
 export type SiteConfig = typeof siteConfig;

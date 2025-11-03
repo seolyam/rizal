@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
 import "./globals.css";
+import "./vintage-theme.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { PreferenceProvider } from "@/components/providers/preference-provider";
 import { SiteHeader } from "@/components/layout/site-header";

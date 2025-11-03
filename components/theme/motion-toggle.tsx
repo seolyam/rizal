@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,11 +6,6 @@ import { usePreferencesStore } from "@/stores/preferences-store";
 
 export function MotionToggle() {
   const { prefersReducedMotion, setReducedMotion } = usePreferencesStore();
-  const isBrowser = typeof window !== "undefined";
-
-  if (!isBrowser) {
-    return null;
-  }
 
   return (
     <Button

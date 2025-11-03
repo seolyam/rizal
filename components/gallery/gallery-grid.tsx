@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import type { GalleryItem } from "@/lib/schemas";
 

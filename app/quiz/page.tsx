@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { QuizInteractive } from "@/components/quiz/quiz-interactive";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { getQuizQuestions } from "@/lib/data";

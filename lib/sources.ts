@@ -1,4 +1,4 @@
-﻿import { getWorkMdx, getWorkSlugs } from "@/lib/mdx";
+import { getWorkMdx, getWorkSlugs } from "@/lib/mdx";
 
 export type Citation = {
   title: string;
