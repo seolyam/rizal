@@ -9,6 +9,7 @@ export const siteConfig = {
     { href: "/ideas", label: "Ideas" },
     { href: "/quiz", label: "Quiz" },
     { href: "/gallery", label: "Gallery" },
+    { href: "/legacy", label: "Legacy" },
     { href: "/sources", label: "Sources" },
   ],
   social: {

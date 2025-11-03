@@ -1,37 +1,102 @@
 [
   {
-    "id": "nationalism",
-    "term": "Nationalism",
-    "category": "Themes",
-    "definition": "Rizal advocated for a Filipino identity rooted in civic virtue, historical awareness, and shared destiny rather than blind rebellion.",
-    "related": ["noli-me-tangere", "el-filibusterismo", "mi-ultimo-adios"]
+    "id": "civic-virtue",
+    "term": "Civic Virtue",
+    "category": "Values",
+    "definition": "For Rizal, patriotism meant disciplined service to community - from Dapitan civic projects to letters urging ethical leadership.",
+    "related": [
+      "dapitan",
+      "mi-ultimo-adios"
+    ]
   },
   {
     "id": "education",
     "term": "Education Reform",
     "category": "Ideas",
     "definition": "Rizal consistently argued that accessible, secular education could dismantle colonial oppression and cultivate responsible citizens.",
-    "related": ["la-indolencia", "annotation-morga"]
+    "related": [
+      "la-indolencia",
+      "annotation-morga"
+    ]
+  },
+  {
+    "id": "ethical-leadership",
+    "term": "Ethical Leadership",
+    "category": "Values",
+    "definition": "From letters to family and students, Rizal emphasized integrity, accountability, and service as qualities essential for future Filipino leaders.",
+    "related": [
+      "mi-ultimo-adios",
+      "civic-virtue"
+    ]
+  },
+  {
+    "id": "la-solidaridad",
+    "term": "La Solidaridad",
+    "category": "Publications",
+    "definition": "The reformist newspaper published in Madrid where Rizal, Marcelo del Pilar, and other ilustrados debated colonial policy and articulated visions for self-government.",
+    "related": [
+      "filipinas-dentro-de-cien-anos",
+      "la-indolencia"
+    ]
+  },
+  {
+    "id": "nationalism",
+    "term": "Nationalism",
+    "category": "Themes",
+    "definition": "Rizal advocated for a Filipino identity rooted in civic virtue, historical awareness, and shared destiny rather than blind rebellion.",
+    "related": [
+      "noli-me-tangere",
+      "el-filibusterismo",
+      "mi-ultimo-adios"
+    ]
   },
   {
     "id": "propaganda-movement",
     "term": "Propaganda Movement",
     "category": "Organizations",
     "definition": "A network of Filipino expatriates in Europe that used journalism and literature to lobby for political reforms between 1880 and 1895.",
-    "related": ["noli-me-tangere", "el-filibusterismo"]
+    "related": [
+      "noli-me-tangere",
+      "el-filibusterismo"
+    ]
   },
   {
-    "id": "civic-virtue",
-    "term": "Civic Virtue",
-    "category": "Values",
-    "definition": "For Rizal, patriotism meant disciplined service to communityfrom Dapitan civic projects to letters urging ethical leadership.",
-    "related": ["dapitan", "mi-ultimo-adios"]
+    "id": "reform-vs-revolution",
+    "term": "Reform versus Revolution",
+    "category": "Debate",
+    "definition": "Rizal favored legal reforms and civic education over violent uprisings, even as contemporaries in the Katipunan argued for immediate armed revolt.",
+    "related": [
+      "fili-published",
+      "liga-filipina"
+    ]
+  },
+  {
+    "id": "scientific-nationalism",
+    "term": "Scientific Nationalism",
+    "category": "Philosophy",
+    "definition": "Blending Enlightenment science with patriotism, Rizal believed empirical research, ethnography, and medicine could empower Filipinos to reclaim their history and well-being.",
+    "related": [
+      "annotation-morga",
+      "world-atlas"
+    ]
   },
   {
     "id": "transnationalism",
     "term": "Transnational Collaboration",
     "category": "Travels",
     "definition": "Rizal forged alliances with scholars and reformists across Europe and Asia, blending global knowledge with local advocacy.",
-    "related": ["travels"]
+    "related": [
+      "travels"
+    ]
+  },
+  {
+    "id": "women-education",
+    "term": "Women's Education",
+    "category": "Social Reform",
+    "definition": "Rizal viewed women's literacy as foundational to nation-building, evident in his support for the Malolos petitioners and the women he taught in Dapitan.",
+    "related": [
+      "letter-to-the-young-women-of-malolos",
+      "dapitan-cooperative"
+    ]
   }
 ]

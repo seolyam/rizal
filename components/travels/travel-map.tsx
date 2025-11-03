@@ -1,7 +1,7 @@
 "use client";
 
 import { geoMercator, geoPath } from "d3-geo";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -53,7 +53,7 @@ export function TravelMap({ spots }: TravelMapProps) {
 
   return (
     <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
-      <div className="paper-surface grain-overlay rounded-3xl border border-border/60 p-6 shadow-soft">
+      <div className="paper-surface grain-overlay flex flex-col gap-4 rounded-3xl border border-border/60 p-4 shadow-soft">
         <svg
           viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
           role="img"
@@ -62,7 +62,7 @@ export function TravelMap({ spots }: TravelMapProps) {
               ? `World map focused on ${active.place}, ${active.country}`
               : "World map for Rizal's journeys. Select a location card to reveal pins."
           }
-          className="w-full rounded-[30px] border border-border/40 bg-parchment/80"
+          className="h-auto w-full rounded-[30px] border border-border/40 bg-parchment/80"
         >
           <defs>
             <radialGradient id="pinGradient" cx="50%" cy="50%" r="50%">
@@ -143,11 +143,40 @@ export function TravelMap({ spots }: TravelMapProps) {
             ) : null}
           </motion.g>
         </svg>
-        {!active ? (
-          <div className="mt-4 rounded-2xl border border-primary/30 bg-primary/5 px-6 py-4 font-serif text-lg text-primary">
-            Select a journey card to illuminate Rizal&apos;s path across the map.
-          </div>
-        ) : null}
+        <AnimatePresence mode="wait">
+          {active ? (
+            <motion.div
+              key={active.id}
+              initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
+              animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              exit={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: -12 }}
+              transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: [0.16, 1, 0.3, 1] }}
+              className="rounded-2xl border border-border/60 bg-background/90 p-5 text-sm leading-relaxed text-muted-foreground shadow-sm"
+            >
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="font-serif text-lg text-foreground">{active.place}</p>
+                <span className="text-xs uppercase tracking-[0.3em] text-primary">
+                  {active.dateRange}
+                </span>
+              </div>
+              <p className="mt-3">{active.story}</p>
+              {active.notes ? (
+                <p className="mt-3 text-xs uppercase tracking-[0.3em] text-secondary">{active.notes}</p>
+              ) : null}
+            </motion.div>
+          ) : (
+            <motion.div
+              key="travel-instructions"
+              initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
+              animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+              exit={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: -12 }}
+              transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: [0.16, 1, 0.3, 1] }}
+              className="rounded-2xl border border-primary/30 bg-primary/5 px-6 py-4 font-serif text-lg text-primary"
+            >
+              Select a journey card to illuminate Rizal&apos;s path across the map.
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <div className="space-y-4">
         {spots.map((spot) => {

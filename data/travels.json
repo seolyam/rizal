@@ -20,6 +20,16 @@
     "notes": "Sites include Intramuros and the old University campus."
   },
   {
+    "id": "singapore",
+    "place": "Singapore",
+    "country": "Straits Settlements",
+    "lat": 1.3521,
+    "lng": 103.8198,
+    "dateRange": "1882, 1891",
+    "story": "Strategic stopover on Rizal's voyages to and from Europe, where he observed bustling entrep\u00f4ts and wrote about Asian progress outside Spanish control.",
+    "notes": "He penned diary entries noting efficient British administration and multicultural trade districts."
+  },
+  {
     "id": "madrid",
     "place": "Madrid",
     "country": "Spain",
@@ -37,7 +47,7 @@
     "lng": 2.3522,
     "dateRange": "1885-1886",
     "story": "Trained in ophthalmology under Dr. Louis de Weckert; organized compatriots and co-founded the society Indios Bravos.",
-    "notes": "Visited the Bibliothèque Nationale and Musée du Louvre for research."
+    "notes": "Visited the Biblioth\u00e8que Nationale and Mus\u00e9e du Louvre for research."
   },
   {
     "id": "heidelberg",
@@ -50,6 +60,26 @@
     "notes": "Strolled along the Philosophenweg overlooking the Neckar River."
   },
   {
+    "id": "brussels",
+    "place": "Brussels",
+    "country": "Belgium",
+    "lat": 50.8503,
+    "lng": 4.3517,
+    "dateRange": "1890-1891",
+    "story": "Worked with Jos\u00e9 Alejandro and Eduardo de Lete on preparing El Filibusterismo while living frugally and writing essays for La Solidaridad.",
+    "notes": "Resided at 38 Rue Philippe de Champagne, sharing lodgings with compatriots."
+  },
+  {
+    "id": "biarritz",
+    "place": "Biarritz",
+    "country": "France",
+    "lat": 43.4832,
+    "lng": -1.5586,
+    "dateRange": "1891",
+    "story": "Stayed with the Boustedt family, revising chapters of El Filibusterismo and reflecting on the financial strain of publication.",
+    "notes": "Enjoyed seaside walks that influenced his descriptive passages about coastal Philippines."
+  },
+  {
     "id": "london",
     "place": "London",
     "country": "United Kingdom",
@@ -58,6 +88,26 @@
     "dateRange": "1888-1889",
     "story": "Researched Philippine history at the British Museum and annotated Antonio de Morga's 'Sucesos de las Islas Filipinas'.",
     "notes": "Lodged at 37 Chalcot Crescent in Primrose Hill."
+  },
+  {
+    "id": "yokohama",
+    "place": "Yokohama",
+    "country": "Japan",
+    "lat": 35.4437,
+    "lng": 139.638,
+    "dateRange": "1888",
+    "story": "Rizal briefly stayed in Yokohama and Tokyo, admiring Japan's modernization and cultural pride\u2014an inspiration for his hopes for the Philippines.",
+    "notes": "Met Spanish Legation officials and a young woman, Seiko Usui, who broadened his views on Asian identity."
+  },
+  {
+    "id": "hong-kong",
+    "place": "Hong Kong",
+    "country": "British Hong Kong",
+    "lat": 22.3193,
+    "lng": 114.1694,
+    "dateRange": "1891-1892",
+    "story": "Set up an ophthalmology clinic on D'Aguilar Street and reunited with family members seeking refuge from political persecution in Calamba.",
+    "notes": "Documented colonial legal proceedings for Calamba tenants with the help of reformist allies."
   },
   {
     "id": "dapitan",

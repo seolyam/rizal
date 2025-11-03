@@ -1,34 +1,49 @@
 [
   {
     "slug": "noli-me-tangere",
-    "title": "Noli Me Tángere",
+    "title": "Noli Me T\u00e1ngere",
     "year": 1887,
     "type": "Novel",
-    "tags": ["fiction", "reform", "satire"],
-    "excerpt": "A sweeping social novel exposing the injustices of colonial Philippine society through memorable characters such as Crisóstomo Ibarra and María Clara."
+    "tags": [
+      "fiction",
+      "reform",
+      "satire"
+    ],
+    "excerpt": "A sweeping social novel exposing the injustices of colonial Philippine society through memorable characters such as Cris\u00f3stomo Ibarra and Mar\u00eda Clara."
   },
   {
-    "slug": "el-filibusterismo",
-    "title": "El Filibusterismo",
-    "year": 1891,
-    "type": "Novel",
-    "tags": ["fiction", "revolution", "critique"],
-    "excerpt": "A darker sequel to Noli that follows the vengeful Simoun and argues for systemic reform amid mounting revolutionary fervor."
+    "slug": "filipinas-dentro-de-cien-anos",
+    "title": "Filipinas dentro de Cien A\u00f1os (The Philippines a Century Hence)",
+    "year": 1889,
+    "type": "Essay",
+    "tags": [
+      "essay",
+      "future",
+      "political"
+    ],
+    "excerpt": "A four-part essay in La Solidaridad analyzing colonial policy, forecasting possible outcomes for the archipelago, and urging Spain to enact meaningful reforms to avoid revolution."
   },
   {
-    "slug": "mi-ultimo-adios",
-    "title": "Mi Último Adiós",
-    "year": 1896,
-    "type": "Poem",
-    "tags": ["poetry", "martyrdom"],
-    "excerpt": "Rizal's farewell poem composed on the eve of his execution, invoking love of country, sacrifice, and hope for liberation."
+    "slug": "letter-to-the-young-women-of-malolos",
+    "title": "Letter to the Young Women of Malolos",
+    "year": 1889,
+    "type": "Letter",
+    "tags": [
+      "education",
+      "women",
+      "reform"
+    ],
+    "excerpt": "A spirited letter praising the Malolos women who petitioned for a night school, encouraging Filipino women to pursue education, moral courage, and civic responsibility."
   },
   {
     "slug": "la-indolencia",
     "title": "La Indolencia de los Filipinos",
     "year": 1890,
     "type": "Essay",
-    "tags": ["essay", "economy"],
+    "tags": [
+      "essay",
+      "economy"
+    ],
     "excerpt": "A serialized essay in La Solidaridad arguing that Filipino indolence stems from colonial policies, forced labor, and climate, not innate laziness."
   },
   {
@@ -36,7 +51,56 @@
     "title": "Annotations to Antonio de Morga's Sucesos de las Islas Filipinas",
     "year": 1890,
     "type": "Historical Commentary",
-    "tags": ["history", "scholarship"],
+    "tags": [
+      "history",
+      "scholarship"
+    ],
     "excerpt": "Rizal's meticulous annotations reclaim Filipino agency by highlighting precolonial achievements erased from colonial narratives."
+  },
+  {
+    "slug": "sobre-la-indolencia",
+    "title": "Sobre la Indolencia de los Filipinos (On the Indolence of Filipinos)",
+    "year": 1890,
+    "type": "Essay",
+    "tags": [
+      "essay",
+      "economy",
+      "social"
+    ],
+    "excerpt": "Rizal examines historical, climatic, and structural causes of alleged Filipino indolence, absolving the people while critiquing exploitative colonial systems."
+  },
+  {
+    "slug": "jose-rizal-annotation-morga",
+    "title": "Prologue to Morga's Sucesos",
+    "year": 1890,
+    "type": "Historical Commentary",
+    "tags": [
+      "history",
+      "identity"
+    ],
+    "excerpt": "The introductory essay to his annotated edition of Antonio de Morga, where Rizal argues for a precolonial Filipino civilization erased by colonial narratives."
+  },
+  {
+    "slug": "el-filibusterismo",
+    "title": "El Filibusterismo",
+    "year": 1891,
+    "type": "Novel",
+    "tags": [
+      "fiction",
+      "revolution",
+      "critique"
+    ],
+    "excerpt": "A darker sequel to Noli that follows the vengeful Simoun and argues for systemic reform amid mounting revolutionary fervor."
+  },
+  {
+    "slug": "mi-ultimo-adios",
+    "title": "Mi \u00daltimo Adi\u00f3s",
+    "year": 1896,
+    "type": "Poem",
+    "tags": [
+      "poetry",
+      "martyrdom"
+    ],
+    "excerpt": "Rizal's farewell poem composed on the eve of his execution, invoking love of country, sacrifice, and hope for liberation."
   }
 ]
