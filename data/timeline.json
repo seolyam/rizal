@@ -5,10 +5,7 @@
     "date": "1861-06-19",
     "title": "Birth in Calamba, Laguna",
     "summary": "Jos\u00e9 Protasio Mercado Rizal y Alonso Realonda is born in Calamba to Francisco Mercado and Teodora Alonso, the seventh of eleven children.",
-    "tags": [
-      "early-life",
-      "family"
-    ]
+    "tags": ["early-life", "family"]
   },
   {
     "id": "early-binan-study",
@@ -16,10 +13,7 @@
     "date": "1870-06-01",
     "title": "Studies in Bi\u00f1an",
     "summary": "Sent to Bi\u00f1an to study under Maestro Justiniano Aquino Cruz, Rizal hones his reading, Latin, and art skills while witnessing class disparities among colonial subjects.",
-    "tags": [
-      "education",
-      "early-life"
-    ]
+    "tags": ["education", "early-life"]
   },
   {
     "id": "gomburza-impact",
@@ -27,10 +21,7 @@
     "date": "1872-02-17",
     "title": "Execution of the Gomburza Priests",
     "summary": "The martyrdom of Fathers G\u00f3mez, Burgos, and Zamora deeply affects young Rizal; he later dedicates his novel to their memory and embraces reformist ideals.",
-    "tags": [
-      "inspiration",
-      "reform"
-    ]
+    "tags": ["inspiration", "reform"]
   },
   {
     "id": "ateneo-manila",
@@ -38,19 +29,14 @@
     "date": "1877-06-10",
     "title": "Graduates from Ateneo Municipal de Manila",
     "summary": "Rizal completes his Bachelor of Arts with highest honors at Ateneo, where he is mentored by Jesuit educators who sharpen his writing and artistic skills.",
-    "tags": [
-      "education"
-    ]
+    "tags": ["education"]
   },
   {
     "id": "ust-medicine",
     "year": 1878,
     "title": "Begins Medical Studies at the University of Santo Tomas",
     "summary": "Rizal enrolls in philosophy and medicine but faces discrimination, prompting his decision to pursue further studies in Europe.",
-    "tags": [
-      "education",
-      "reform"
-    ]
+    "tags": ["education", "reform"]
   },
   {
     "id": "youth-poem",
@@ -58,10 +44,7 @@
     "date": "1879-12-08",
     "title": "Wins with 'A la Juventud Filipina'",
     "summary": "Rizal's Spanish poem 'A la Juventud Filipina' wins a literary contest, urging Filipino youth to elevate their homeland through knowledge and art.",
-    "tags": [
-      "literature",
-      "youth"
-    ]
+    "tags": ["literature", "youth"]
   },
   {
     "id": "spain-journey",
@@ -69,10 +52,7 @@
     "date": "1882-05-03",
     "title": "Departs for Europe",
     "summary": "With the blessing of his elder brother Paciano, Rizal secretly sails for Spain to continue his studies and engage with reformist circles.",
-    "tags": [
-      "travels",
-      "reform"
-    ]
+    "tags": ["travels", "reform"]
   },
   {
     "id": "luna-hidalgo-speech",
@@ -80,11 +60,7 @@
     "date": "1884-06-25",
     "title": "Speech Honoring Luna and Hidalgo",
     "summary": "At a banquet in Madrid, Rizal praises Filipino painters Juan Luna and F\u00e9lix Resurrecci\u00f3n Hidalgo, asserting that their triumphs prove Filipinos worthy of equality.",
-    "tags": [
-      "activism",
-      "reform",
-      "diaspora"
-    ]
+    "tags": ["activism", "reform", "diaspora"]
   },
   {
     "id": "medical-licentiate",
@@ -92,10 +68,7 @@
     "date": "1885-06-19",
     "title": "Completes Licentiate in Medicine",
     "summary": "Rizal earns his Licentiate in Medicine and Philosophy at Universidad Central de Madrid, specialising in ophthalmology to treat his mother's failing eyesight.",
-    "tags": [
-      "education",
-      "service"
-    ]
+    "tags": ["education", "service"]
   },
   {
     "id": "noli-published",
@@ -103,10 +76,7 @@
     "date": "1887-03-21",
     "title": "Publishes Noli Me T\u00e1ngere",
     "summary": "Rizal's first novel, printed in Berlin, critiques colonial abuses and sparks debate among Filipino expatriates and Spanish officials.",
-    "tags": [
-      "works",
-      "reform"
-    ]
+    "tags": ["works", "reform"]
   },
   {
     "id": "return-philippines",
@@ -114,20 +84,14 @@
     "date": "1887-08-05",
     "title": "Returns to the Philippines",
     "summary": "Rizal comes home to Calamba, where the success of Noli Me T\u00e1ngere leads to surveillance by colonial authorities.",
-    "tags": [
-      "travels",
-      "resistance"
-    ]
+    "tags": ["travels", "resistance"]
   },
   {
     "id": "indios-bravos",
     "year": 1889,
     "title": "Founds Indios Bravos in Paris",
     "summary": "Together with fellow ilustrados, Rizal organizes a society promoting Filipino excellence and solidarity across Europe.",
-    "tags": [
-      "activism",
-      "community"
-    ]
+    "tags": ["activism", "community"]
   },
   {
     "id": "fili-published",
@@ -135,10 +99,7 @@
     "date": "1891-09-18",
     "title": "Releases El Filibusterismo",
     "summary": "Printed in Ghent, Rizal's second novel offers a darker critique of colonial rule and advocates for socio-political reforms.",
-    "tags": [
-      "works",
-      "reform"
-    ]
+    "tags": ["works", "reform"]
   },
   {
     "id": "hongkong-practice",
@@ -146,10 +107,7 @@
     "date": "1891-11-20",
     "title": "Opens Clinic in Hong Kong",
     "summary": "After publishing El Filibusterismo, Rizal moves to Hong Kong where he establishes a medical practice serving multiethnic patients and shelters his family from harassment.",
-    "tags": [
-      "travels",
-      "service"
-    ]
+    "tags": ["travels", "service"]
   },
   {
     "id": "liga-filipina",
@@ -157,10 +115,7 @@
     "date": "1892-07-03",
     "title": "Founds La Liga Filipina",
     "summary": "Rizal convenes reformists in Manila to launch La Liga Filipina, advocating peaceful civic reforms, mutual aid, and representation under Spanish rule.",
-    "tags": [
-      "activism",
-      "organization"
-    ]
+    "tags": ["activism", "organization"]
   },
   {
     "id": "dapitan-exile",
@@ -168,10 +123,7 @@
     "date": "1892-07-17",
     "title": "Exile in Dapitan",
     "summary": "Arrested upon his return, Rizal is exiled to Dapitan in Mindanao, where he runs a school, clinic, and civic projects.",
-    "tags": [
-      "exile",
-      "service"
-    ]
+    "tags": ["exile", "service"]
   },
   {
     "id": "dapitan-cooperative",
@@ -179,11 +131,7 @@
     "date": "1894-01-15",
     "title": "Builds Cooperative in Dapitan",
     "summary": "In exile, Rizal establishes a farmers' cooperative, waterworks, and a community school, demonstrating practical nation-building through education and civic labor.",
-    "tags": [
-      "exile",
-      "community",
-      "service"
-    ]
+    "tags": ["exile", "community", "service"]
   },
   {
     "id": "cuba-mission",
@@ -191,10 +139,7 @@
     "date": "1896-08-06",
     "title": "Appointed to Cuba Medical Mission",
     "summary": "Spain authorizes Rizal to serve as a military doctor in Cuba to treat yellow fever victims, but he is arrested en route amid the Katipunan uprising.",
-    "tags": [
-      "travels",
-      "trial"
-    ]
+    "tags": ["travels", "trial"]
   },
   {
     "id": "dapitan-marriage",
@@ -202,9 +147,7 @@
     "date": "1896-09-03",
     "title": "Marries Josephine Bracken",
     "summary": "In Dapitan, Rizal and Josephine Bracken exchange vows before his departure to serve as a military doctor in Cuba.",
-    "tags": [
-      "personal"
-    ]
+    "tags": ["personal"]
   },
   {
     "id": "trial-manila",
@@ -212,9 +155,7 @@
     "date": "1896-12-06",
     "title": "Military Trial in Manila",
     "summary": "Rizal is tried and convicted of rebellion, sedition, and conspiracy based on his alleged ties to the Katipunan uprising.",
-    "tags": [
-      "trial"
-    ]
+    "tags": ["trial"]
   },
   {
     "id": "execution",
@@ -222,9 +163,28 @@
     "date": "1896-12-30",
     "title": "Martyrdom at Bagumbayan",
     "summary": "Rizal is executed by firing squad at Bagumbayan (Luneta), leaving a final poem, Mi \u00daltimo Adi\u00f3s, and inspiring the Philippine Revolution.",
-    "tags": [
-      "legacy",
-      "martyrdom"
-    ]
+    "tags": ["legacy", "martyrdom"]
+  },
+  {
+    "id": "legacy-revolution",
+    "year": 1897,
+    "title": "Legacy Fuels the Revolution",
+    "summary": "Rizal's martyrdom becomes the rallying cry of the Philippine Revolution. Leaders like Andr\u00e9s Bonifacio and Emilio Aguinaldo cite his works while drafting declarations of independence.",
+    "tags": ["legacy", "history", "revolution"]
+  },
+  {
+    "id": "rizal-monument",
+    "year": 1913,
+    "date": "1913-12-30",
+    "title": "Rizal Monument Unveiled",
+    "summary": "The bronze-and-granite monument at Luneta Park is inaugurated, interring Rizal\u2019s remains and becoming the centerpiece for national commemorations.",
+    "tags": ["commemoration", "legacy"]
+  },
+  {
+    "id": "global-honors",
+    "year": 1920,
+    "title": "Global Honors Expand",
+    "summary": "Statues, parks, and institutions dedicated to Rizal appear in Spain, Germany, Hong Kong, the United States, and across the Philippines, underscoring his international legacy.",
+    "tags": ["legacy", "global-impact"]
   }
 ]

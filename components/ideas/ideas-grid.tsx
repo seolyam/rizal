@@ -1,13 +1,24 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { Idea, WorkSummary } from "@/lib/schemas";
-import Link from "next/link";
+
+function normalize(value: string) {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 export function IdeasGrid({ ideas, works }: { ideas: Idea[]; works: WorkSummary[] }) {
   return (
     <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {ideas.map((idea) => {
-        const related = works.filter((work) => idea.related.includes(work.slug));
+        const related = works.filter((work) => {
+          const workSlug = normalize(work.title);
+          return idea.related.some((value) => normalize(value) === workSlug);
+        });
         return (
           <Card key={idea.id} className="space-y-4 border-border/60 bg-card/80">
             <div className="flex items-center justify-between">
@@ -26,10 +37,8 @@ export function IdeasGrid({ ideas, works }: { ideas: Idea[]; works: WorkSummary[
                 </p>
                 <ul className="space-y-1 text-sm text-secondary">
                   {related.map((work) => (
-                    <li key={work.slug}>
-                      <Link href={`/works/${work.slug}`} className="hover:underline">
-                        {work.title}
-                      </Link>
+                    <li key={`${work.title}-${work.year}`}>
+                      <span>{work.title}</span>
                     </li>
                   ))}
                 </ul>

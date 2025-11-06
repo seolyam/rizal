@@ -1,106 +1,421 @@
 [
   {
-    "slug": "noli-me-tangere",
-    "title": "Noli Me T\u00e1ngere",
+    "title": "Noli Me Tángere",
     "year": 1887,
     "type": "Novel",
+    "readingTime": 8,
+    "excerpt": "A sweeping social novel exposing the injustices of colonial Philippine society through memorable characters such as Crisóstomo Ibarra and María Clara.",
     "tags": [
       "fiction",
       "reform",
       "satire"
     ],
-    "excerpt": "A sweeping social novel exposing the injustices of colonial Philippine society through memorable characters such as Cris\u00f3stomo Ibarra and Mar\u00eda Clara."
+    "summary": "Rizal's first novel exposes the injustices of Spanish colonialism through interwoven stories of love, faith, and civic conscience.",
+    "details": {
+      "genre": "Novel",
+      "summary": "Written in Berlin with the support of Maximo Viola, the novel blends satire, romance, and political critique to expose clerical abuses, colonial bureaucracy, and the moral awakening of the Filipino people.\n\nCrisóstomo Ibarra’s plan to build a secular school collides with friar power, María Clara must navigate conflicting loyalties, and the tragedies of Sisa, Basilio, and Crispín reveal the systemic violence inflicted on the rural poor.",
+      "majorThemes": [
+        "Education as a path to emancipation and national consciousness.",
+        "Clerical power and the entanglement of church and state.",
+        "Satire and social hypocrisy within colonial society."
+      ],
+      "structure": [
+        "64 chapters that interleave romantic drama with biting political commentary.",
+        "Recurring juxtapositions of elite salons and peasant suffering to show structural inequality.",
+        "Use of humor and allegory to disarm readers before confronting abuse."
+      ],
+      "characters": [
+        "Crisóstomo Ibarra – Idealistic reformer whose school project confronts friar dominance.",
+        "María Clara – Embodies both agency and constraint in a patriarchal, colonial order.",
+        "Sisa, Basilio, and Crispín – Personify the cost of poverty and institutional cruelty."
+      ],
+      "historicalImpact": "Banned by the colonial government yet circulated clandestinely, the novel galvanized the Propaganda Movement, pushed Governor-General Terrero to review friar conduct, and anchored future revolutionary discourse.",
+      "quotes": [
+        "\"No hay tirano peor que la ignorancia y la superstición.\""
+      ],
+      "sources": [
+        {
+          "title": "José Rizal: Life, Works, and Writings",
+          "author": "Gregorio F. Zaide",
+          "url": "https://www.nhcp.gov.ph/jose-rizal/"
+        },
+        {
+          "title": "Noli Me Tángere",
+          "author": "José Rizal",
+          "url": "https://www.gutenberg.org/ebooks/20228"
+        }
+      ]
+    }
   },
   {
-    "slug": "filipinas-dentro-de-cien-anos",
-    "title": "Filipinas dentro de Cien A\u00f1os (The Philippines a Century Hence)",
-    "year": 1889,
-    "type": "Essay",
-    "tags": [
-      "essay",
-      "future",
-      "political"
-    ],
-    "excerpt": "A four-part essay in La Solidaridad analyzing colonial policy, forecasting possible outcomes for the archipelago, and urging Spain to enact meaningful reforms to avoid revolution."
-  },
-  {
-    "slug": "letter-to-the-young-women-of-malolos",
-    "title": "Letter to the Young Women of Malolos",
-    "year": 1889,
-    "type": "Letter",
-    "tags": [
-      "education",
-      "women",
-      "reform"
-    ],
-    "excerpt": "A spirited letter praising the Malolos women who petitioned for a night school, encouraging Filipino women to pursue education, moral courage, and civic responsibility."
-  },
-  {
-    "slug": "la-indolencia",
-    "title": "La Indolencia de los Filipinos",
-    "year": 1890,
-    "type": "Essay",
-    "tags": [
-      "essay",
-      "economy"
-    ],
-    "excerpt": "A serialized essay in La Solidaridad arguing that Filipino indolence stems from colonial policies, forced labor, and climate, not innate laziness."
-  },
-  {
-    "slug": "annotation-morga",
-    "title": "Annotations to Antonio de Morga's Sucesos de las Islas Filipinas",
-    "year": 1890,
-    "type": "Historical Commentary",
-    "tags": [
-      "history",
-      "scholarship"
-    ],
-    "excerpt": "Rizal's meticulous annotations reclaim Filipino agency by highlighting precolonial achievements erased from colonial narratives."
-  },
-  {
-    "slug": "sobre-la-indolencia",
-    "title": "Sobre la Indolencia de los Filipinos (On the Indolence of Filipinos)",
-    "year": 1890,
-    "type": "Essay",
-    "tags": [
-      "essay",
-      "economy",
-      "social"
-    ],
-    "excerpt": "Rizal examines historical, climatic, and structural causes of alleged Filipino indolence, absolving the people while critiquing exploitative colonial systems."
-  },
-  {
-    "slug": "jose-rizal-annotation-morga",
-    "title": "Prologue to Morga's Sucesos",
-    "year": 1890,
-    "type": "Historical Commentary",
-    "tags": [
-      "history",
-      "identity"
-    ],
-    "excerpt": "The introductory essay to his annotated edition of Antonio de Morga, where Rizal argues for a precolonial Filipino civilization erased by colonial narratives."
-  },
-  {
-    "slug": "el-filibusterismo",
     "title": "El Filibusterismo",
     "year": 1891,
     "type": "Novel",
+    "readingTime": 8,
+    "excerpt": "A darker sequel to Noli that follows the vengeful Simoun and argues for systemic reform amid mounting revolutionary fervor.",
     "tags": [
       "fiction",
       "revolution",
       "critique"
     ],
-    "excerpt": "A darker sequel to Noli that follows the vengeful Simoun and argues for systemic reform amid mounting revolutionary fervor."
+    "summary": "The darker sequel to Noli Me Tángere follows Simoun’s failed bid for violent revolution while dissecting sacrifice, corruption, and the limits of vengeance.",
+    "details": {
+      "genre": "Novel",
+      "summary": "Published in Ghent, the narrative returns Ibarra as the jeweler Simoun who cultivates colonial elites while plotting a cataclysmic bombing. His conspiracy collapses, forcing allies to confront the moral cost of retaliation and the fragility of reformist hope.\n\nAcross the arc, student organizers, ilustrados, and conscience figures like Padre Florentino debate whether liberation can be achieved by violence or sustained through justice.",
+      "majorThemes": [
+        "Reform versus revolution under intensifying repression.",
+        "Corruption, hypocrisy, and despair within colonial institutions.",
+        "Sacrifice and martyrdom as recurring costs of resistance.",
+        "Collective awakening and fractured solidarity among reformers."
+      ],
+      "structure": [
+        "A tighter, darker narrative that mirrors the inevitability of Simoun’s failed plot.",
+        "Parallel storylines contrasting student reformists with conspirators.",
+        "Symbolic objects—especially Simoun’s jewelry—carry political weight."
+      ],
+      "characters": [
+        "Simoun (Ibarra) – Disguised avenger whose failure dramatizes the peril of vengeance.",
+        "Basilio and Isagani – Young reformers debating tactics and moral boundaries.",
+        "Padre Florentino – Questions whether freedom gained through terror can last."
+      ],
+      "historicalImpact": "Like the Noli, the book was banned yet circulated secretly, sharpened debates within the Propaganda Movement, and provided later revolutionaries language for sacrifice, conscience, and state violence.",
+      "quotes": [
+        "\"La redención no se alcanza con la venganza, sino con la justicia.\""
+      ],
+      "sources": [
+        {
+          "title": "El Filibusterismo",
+          "author": "José Rizal",
+          "url": "https://www.gutenberg.org/ebooks/10676"
+        },
+        {
+          "title": "El Filibusterismo Summary",
+          "url": "https://www.supersummary.com/el-filibusterismo/summary/"
+        },
+        {
+          "title": "El Filibusterismo Study Guide",
+          "url": "https://www.litcharts.com/lit/el-filibusterismo/summary"
+        }
+      ]
+    }
   },
   {
-    "slug": "mi-ultimo-adios",
-    "title": "Mi \u00daltimo Adi\u00f3s",
+    "title": "Filipinas dentro de Cien Años",
+    "year": 1889,
+    "type": "Essay",
+    "readingTime": 9,
+    "excerpt": "A four-part essay in La Solidaridad analyzing colonial policy, forecasting outcomes for the archipelago, and urging Spain to enact reforms to avoid revolution.",
+    "tags": [
+      "essay",
+      "future",
+      "political"
+    ],
+    "summary": "Rizal’s four-part series forecasts several possible futures for the Philippines, warning Spain that only sweeping reforms can avert revolution or foreign domination.",
+    "details": {
+      "genre": "Political Essay Series",
+      "summary": "Published in La Solidaridad between 1889 and 1890, the essay surveys Philippine history, critiques colonial policy, and models three future scenarios: sincere reform, violent revolution, or annexation by another empire.\n\nRizal blends statistics, regional comparisons, and geopolitical foresight to predict that education, migration, and print culture are already forming Filipino nationhood.",
+      "majorThemes": [
+        "Reform or ruin as the only choices left to Spain.",
+        "Geopolitical foresight that situates the Philippines within Asian empire rivalries.",
+        "National consciousness forged by education and diaspora networks.",
+        "Foreign intervention as a consequence of colonial neglect."
+      ],
+      "structure": [
+        "Historical retrospective on precolonial vitality and colonial decline.",
+        "Diagnosis of administrative corruption, friar abuses, and economic stagnation.",
+        "Scenario forecasting that weighs reform, revolution, and foreign conquest."
+      ],
+      "historicalImpact": "The essay armed reformists with data-rich warnings and helped later historians understand how Rizal anticipated both revolution and American annexation.",
+      "quotes": [
+        "\"Un pueblo que no se conoce, no se ama.\"",
+        "\"España debe abrir los ojos o se quedará sin Filipinas.\""
+      ],
+      "sources": [
+        {
+          "title": "Filipinas dentro de cien años",
+          "author": "José Rizal",
+          "url": "https://www.projectgutenberg.org/files/47262/47262-h/47262-h.htm"
+        },
+        {
+          "title": "El Filibusterismo and the Politics of Memory",
+          "url": "https://www.supersummary.com/el-filibusterismo/summary/"
+        },
+        {
+          "title": "Rizal’s Geopolitical Analysis",
+          "url": "https://cids.up.edu.ph/wp-content/uploads/2024/11/DP-Rizals-Geopolitical-Analysis-11072024-B.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Letter to the Young Women of Malolos",
+    "year": 1889,
+    "type": "Letter",
+    "readingTime": 7,
+    "excerpt": "A spirited letter praising the Malolos women who petitioned for a night school, encouraging Filipino women to pursue education, moral courage, and civic responsibility.",
+    "tags": [
+      "education",
+      "women",
+      "reform"
+    ],
+    "summary": "Rizal celebrates the Malolos women who petitioned for a night school, urging Filipino women to pursue education, civic virtue, and moral courage.",
+    "details": {
+      "genre": "Epistolary Essay",
+      "summary": "Rizal congratulates twenty young women for challenging friar control of education. He links literacy, moral courage, and civic responsibility, insisting that enlightened mothers raise citizens who can resist oppression.\n\nThe letter blends affectionate counsel with political argument, inviting Filipino women to become partners in the struggle for national dignity.",
+      "majorThemes": [
+        "Education as empowerment for women and the nation.",
+        "Faith grounded in reason rather than blind obedience.",
+        "Domestic space as the seedbed of civic responsibility.",
+        "Courage and self-respect as antidotes to colonial paternalism."
+      ],
+      "structure": [
+        "Commendation of the petition and its national significance.",
+        "Guidance on education, religion, and ethical leadership.",
+        "Exhortation to sustain solidarity and vigilance."
+      ],
+      "historicalImpact": "The letter circulated clandestinely among reformists, inspired campaigns for women’s schooling, and clarified Rizal’s belief in women as intellectual partners in the freedom struggle.",
+      "quotes": [
+        "\"Let us be reasonable and open our children’s eyes so that they may guard their rights.\""
+      ],
+      "sources": [
+        {
+          "title": "Letter to the Young Women of Malolos",
+          "author": "José Rizal",
+          "url": "https://www.gutenberg.org/files/15618/15618-h/15618-h.htm"
+        },
+        {
+          "title": "The Malolos Petition",
+          "url": "https://www.studocu.com/ph/document/university-of-the-east-philippines/accountancy/summary-of-my-last-farewell/13063436"
+        },
+        {
+          "title": "The Indolence of the Filipinos and the Malolos Women",
+          "url": "https://www.scribd.com/document/843915984/The-Indolence-of-the-Filipinos-and-the-Malolos-Women"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Annotations to Antonio de Morga's Sucesos de las Islas Filipinas",
+    "year": 1890,
+    "type": "Historical Commentary",
+    "readingTime": 7,
+    "excerpt": "Rizal's meticulous annotations reclaim Filipino agency by highlighting precolonial achievements erased from colonial narratives.",
+    "tags": [
+      "history",
+      "scholarship"
+    ],
+    "summary": "Rizal’s annotated edition of Morga’s 1609 chronicle restores precolonial Filipino agency and exposes the distortions of Spanish historiography.",
+    "details": {
+      "genre": "Annotated Historical Chronicle",
+      "summary": "While researching in the British Museum, Rizal annotated Antonio de Morga’s chronicle to reposition Filipinos at the center of their own history. His marginalia document precolonial trade, literacy, and governance, rebutting stereotypes of backwardness and highlighting colonial violence.\n\nEach annotation reframes Spanish accounts through a Filipino lens, encouraging readers to reclaim memory as a foundation for national pride.",
+      "majorThemes": [
+        "Historical accuracy and pride in precolonial civilization.",
+        "Debunking colonial bias and exposing demographic decline under Spain.",
+        "Religious pluralism that challenges narratives of Catholic monopoly."
+      ],
+      "structure": [
+        "Chapter-by-chapter annotation clarifying geography, ethnography, and technology.",
+        "Historical glosses that restore indigenous terminology and erased alliances.",
+        "Comparative analysis situating the Philippines within Asian trade networks."
+      ],
+      "historicalImpact": "The edition became the first major history of the archipelago written from a Filipino viewpoint, inspiring ilustrados to ground nationalism in documented heritage and influencing later historiography.",
+      "quotes": [
+        "\"Los indios tenían sus propios caracteres antes de que los españoles les impusiesen el alfabeto latino.\""
+      ],
+      "sources": [
+        {
+          "title": "Sucesos de las Islas Filipinas",
+          "author": "Antonio de Morga (annotated by José Rizal)",
+          "url": "https://www.gutenberg.org/ebooks/30270"
+        },
+        {
+          "title": "Rizal’s Annotations on Morga",
+          "url": "https://www.studocu.com/ph/document/central-luzon-state-university/life-of-rizal/4-rizals-annotation-of-morgas-sucesos-de-las-islas-filipinas/45449209"
+        },
+        {
+          "title": "Re-reading Morga with Rizal",
+          "url": "https://revistas.ufrj.br/index.php/lh/article/download/30599/22154/110576"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Prologue to Morga's Sucesos",
+    "year": 1890,
+    "type": "Historical Essay",
+    "readingTime": 4,
+    "excerpt": "Rizal’s prologue frames his annotated Sucesos with a proud account of precolonial prosperity and a call to reclaim national memory.",
+    "tags": [
+      "history",
+      "identity"
+    ],
+    "summary": "Rizal’s prologue to his annotated edition of Morga frames precolonial Philippines as prosperous and urges Filipinos to reclaim their erased history.",
+    "details": {
+      "genre": "Historical Essay",
+      "summary": "Serving as the gateway to his annotated edition, the prologue asserts that the archipelago possessed thriving trade, craftsmanship, and social order before Spanish conquest. Rizal invites readers to scrutinize colonial sources, recover their archives, and rebuild Filipino identity on historical truth.\n\nThe piece models how historical narrative can become a tool for political renewal.",
+      "majorThemes": [
+        "Precolonial prosperity and indigenous achievement.",
+        "Narrative correction that challenges colonial propaganda.",
+        "Memory as a catalyst for national dignity."
+      ],
+      "structure": [
+        "Recollection of precolonial abundance and external trade.",
+        "Critique of Spanish distortions and erasures.",
+        "Call to study authentic records and honor ancestral heritage."
+      ],
+      "historicalImpact": "The prologue primed ilustrado readers to interpret Morga’s chronicle critically and inspired later historians to write from a Filipino perspective.",
+      "quotes": [
+        "\"Mientras más conozca un pueblo su historia, más digno será de un porvenir más glorioso.\""
+      ],
+      "sources": [
+        {
+          "title": "Prologue to Rizal’s Edition of Morga",
+          "url": "https://www.slideshare.net/slideshow/dr-antonio-de-morgas-sucesos-de-las-islas-filipinas/173334704"
+        },
+        {
+          "title": "Life and Works of Rizal Summary",
+          "url": "https://www.studocu.com/ph/document/cagayan-state-university/rizals-lifeworks-and-writings/life-and-works-of-rizal-summary/23999192"
+        }
+      ]
+    }
+  },
+  {
+    "title": "La Indolencia de los Filipinos",
+    "year": 1890,
+    "type": "Essay",
+    "readingTime": 8,
+    "excerpt": "A serialized essay in La Solidaridad arguing that Filipino indolence stems from colonial policies, forced labor, and climate—not innate laziness.",
+    "tags": [
+      "essay",
+      "economy"
+    ],
+    "summary": "Rizal’s serialized essay dismantles the myth of innate Filipino laziness by exposing how colonial abuses, forced labor, and social disruption produced indolence.",
+    "details": {
+      "genre": "Essay Series",
+      "summary": "Printed in five installments in La Solidaridad, the essay refutes accusations of inherent laziness by tracing how war, forced labor, disease, and economic monopolies eroded productivity and hope. Rizal concedes climate can tempt rest but insists misgovernment is the deeper culprit.\n\nHe prescribes education, national sentiment, and liberty as the only remedies to restore industry and pride.",
+      "majorThemes": [
+        "Colonial oppression as the root of economic stagnation.",
+        "Education and reform as solutions to social paralysis.",
+        "Historical and environmental analysis that integrates climate with policy."
+      ],
+      "structure": [
+        "Part 1 dismantles the charge of innate laziness.",
+        "Parts 2–3 catalogue depopulation, epidemics, and forced labor.",
+        "Part 4 critiques trade suppression and government corruption.",
+        "Part 5 calls for education, liberty, and national pride."
+      ],
+      "historicalImpact": "The essay gave reformists intellectual ammunition against racist caricatures, reframed colonial statistics, and became a rallying text for political consciousness.",
+      "quotes": [
+        "\"Permitid la libertad y veréis cómo se levantan las artes, el comercio y la agricultura.\""
+      ],
+      "sources": [
+        {
+          "title": "Summary: La Indolencia",
+          "url": "https://www.scribd.com/document/107498071/Summary-Indolence"
+        },
+        {
+          "title": "The Indolence of the Filipino",
+          "author": "José Rizal",
+          "url": "http://www.gutenberg.org/ebooks/6885"
+        },
+        {
+          "title": "Sobre la indolencia de los filipinos",
+          "url": "https://en.wikipedia.org/wiki/Sobre_la_indolencia_de_los_filipinos"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Sobre la Indolencia de los Filipinos",
+    "year": 1890,
+    "type": "Essay",
+    "readingTime": 8,
+    "excerpt": "Rizal examines historical, climatic, and structural causes of alleged Filipino indolence, absolving the people while critiquing exploitative colonial systems.",
+    "tags": [
+      "essay",
+      "economy",
+      "social"
+    ],
+    "summary": "Rizal’s companion essay dissects how colonial abuses, social disruption, and erased opportunities produced the appearance of Filipino indolence.",
+    "details": {
+      "genre": "Essay",
+      "summary": "Appearing alongside La Indolencia, the essay deepens Rizal’s forensic look at colonial society. He acknowledges indolence only as an imposed adaptation to forced labor, confiscated harvests, misguided religious teaching, and a rigid caste system that erases opportunity.\n\nLiberty and education, he argues, remain the pathway to rebuild pride, labor, and national ambition.",
+      "majorThemes": [
+        "Systemic abuse versus cultural nature in explaining indolence.",
+        "Economic collapse triggered by war, piracy, and bureaucracy.",
+        "Education, religion, and nationalism as intertwined reforms.",
+        "Climate and health as secondary factors magnified by neglect."
+      ],
+      "structure": [
+        "Historical review of precolonial industry.",
+        "Catalogue of causes ranging from depopulation to administrative abuse.",
+        "Critique of religious doctrine that glorifies poverty.",
+        "Reform agenda that centers education and national sentiment."
+      ],
+      "historicalImpact": "The work helped demolish racist narratives in European debates, shaped nationalist discourse, and informed later economic critiques under American rule.",
+      "quotes": [
+        "\"La indolencia es hija de un gobierno indolente.\""
+      ],
+      "sources": [
+        {
+          "title": "Sobre la indolencia de los filipinos",
+          "url": "https://en.wikipedia.org/wiki/Sobre_la_indolencia_de_los_filipinos"
+        },
+        {
+          "title": "The Indolence of the Filipino",
+          "author": "José Rizal",
+          "url": "https://web.seducoahuila.gob.mx/biblioweb/upload/the_indolence_of_the_filipino_by_jos%C3%A9_rizal.pdf"
+        },
+        {
+          "title": "The Myth of Happy Filipinos",
+          "author": "Ambeth Ocampo",
+          "url": "https://opinion.inquirer.net/137268/the-myth-of-happy-filipinos"
+        }
+      ]
+    }
+  },
+  {
+    "title": "Mi Último Adiós",
     "year": 1896,
     "type": "Poem",
+    "readingTime": 6,
+    "excerpt": "Rizal's farewell poem composed on the eve of his execution, invoking love of country, sacrifice, and hope for liberation.",
     "tags": [
       "poetry",
       "martyrdom"
     ],
-    "excerpt": "Rizal's farewell poem composed on the eve of his execution, invoking love of country, sacrifice, and hope for liberation."
+    "summary": "Rizal’s final poem intertwines patriotism, faith, and sacrifice, urging Filipinos to continue the struggle after his execution.",
+    "details": {
+      "genre": "Farewell Poem",
+      "summary": "Written in Fort Santiago hours before his execution, the poem expresses gratitude, hope, and a plea for continued resistance. Rizal embraces death as the final service to his homeland, comforts his family, and prays that his memory kindle future victories.\n\nThe 14 stanzas weave personal farewell with national exhortation, blending Christian faith and revolutionary ardor.",
+      "majorThemes": [
+        "Martyrdom and patriotic devotion.",
+        "Hope in a future liberated Philippines.",
+        "Sacrifice and legacy addressed to family and compatriots."
+      ],
+      "structure": [
+        "Fourteen stanzas that move from thanksgiving to exhortation and prayer.",
+        "Symbolic imagery of dawn, light, and the motherland as enduring motifs."
+      ],
+      "historicalImpact": "Circulated secretly after his death, the poem became a nationalist scripture recited at commemorations, classrooms, and movements for independence.",
+      "quotes": [
+        "\"I die without seeing the dawn brighten over my native land.\"",
+        "\"Farewell, adored Fatherland, clime of the sun caressed.\""
+      ],
+      "sources": [
+        {
+          "title": "Mi Último Adiós",
+          "url": "https://en.wikipedia.org/wiki/Mi_%C3%BAltimo_adi%C3%B3s"
+        },
+        {
+          "title": "Mi Último Adiós or My Last Farewell of Rizal",
+          "url": "https://www.slideshare.net/slideshow/mi-ultimo-adios-or-my-last-farewell-of-rizal/274711625"
+        },
+        {
+          "title": "Rizal’s Mi Último Adiós and PHL Independence",
+          "url": "https://www.philstar.com/the-freeman/opinion/2022/12/29/2234023/rizals-mi-ultimo-adios-and-phl-independence"
+        }
+      ]
+    }
   }
 ]

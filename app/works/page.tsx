@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { WorksExplorer } from "@/components/works/works-explorer";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { TourControls } from "@/components/tour/tour-controls";
 import { getWorks } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -9,12 +10,12 @@ export const metadata: Metadata = {
     "Filter José Rizal's novels, essays, and annotations with quick summaries, tags, and classroom prompts.",
 };
 
-export default function WorksPage() {
-  const works = getWorks();
+export default async function WorksPage() {
+  const works = await getWorks();
   return (
     <div className="container space-y-12 py-16">
+      <TourControls className="mx-auto max-w-3xl" />
       <SectionHeading
-        eyebrow="Works"
         title="Annotated readings and primary sources"
         description="Use the filters to segment novels, essays, and commentaries. Each entry links to MDX-rich detail pages with citations."
       />

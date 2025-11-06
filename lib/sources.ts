@@ -1,4 +1,4 @@
-import { getWorkMdx, getWorkSlugs } from "@/lib/mdx";
+import { getWorks } from "@/lib/data";
 
 export type Citation = {
   title: string;
@@ -8,17 +8,16 @@ export type Citation = {
 };
 
 export async function getCitations(): Promise<Citation[]> {
-  const slugs = await getWorkSlugs();
+  const works = await getWorks();
   const citations: Citation[] = [];
 
-  for (const slug of slugs) {
-    const { frontmatter } = await getWorkMdx(slug);
-    frontmatter.sources.forEach((source) => {
+  for (const work of works) {
+    work.details.sources.forEach((source) => {
       citations.push({
         title: source.title,
         author: source.author,
         url: source.url,
-        context: frontmatter.title,
+        context: work.title,
       });
     });
   }

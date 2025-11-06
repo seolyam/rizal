@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { TourControls } from "@/components/tour/tour-controls";
 import { getCitations } from "@/lib/sources";
 
 export const metadata: Metadata = {
@@ -12,8 +13,8 @@ export default async function SourcesPage() {
   const citations = await getCitations();
   return (
     <div className="container space-y-12 py-16">
+      <TourControls className="mx-auto max-w-3xl" />
       <SectionHeading
-        eyebrow="Sources"
         title="References across the experience"
         description="Each interactive module cites reputable archives and scholarship. Expand or export this list for classroom bibliographies."
       />

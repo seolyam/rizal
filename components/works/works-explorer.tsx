@@ -10,24 +10,49 @@ function normalize(value: string) {
   return value.toLowerCase();
 }
 
+function matchesQuery(value: string | undefined | null, query: string) {
+  if (!value) return false;
+  return normalize(value).includes(query);
+}
+
 export function WorksExplorer({ works }: { works: WorkSummary[] }) {
   const [query, setQuery] = useState("");
   const [activeType, setActiveType] = useState("all");
 
+  const normalizedQuery = normalize(query.trim());
+
   const types = useMemo(() => {
     const set = new Set<string>();
     works.forEach((work) => set.add(work.type));
-    return Array.from(set.values());
+    return Array.from(set.values()).sort();
   }, [works]);
 
   const filtered = useMemo(() => {
     return works.filter((work) => {
       const matchesType = activeType === "all" || work.type === activeType;
-      const matchesQuery = normalize(work.title).includes(normalize(query)) ||
-        normalize(work.excerpt).includes(normalize(query));
-      return matchesType && matchesQuery;
+      if (!matchesType) return false;
+
+      if (normalizedQuery.length === 0) {
+        return true;
+      }
+
+      const haystack: (string | undefined)[] = [
+        work.title,
+        work.excerpt,
+        work.summary,
+        work.details?.summary,
+        work.details?.historicalImpact,
+        work.details?.genre,
+        ...work.tags,
+        ...(work.details?.majorThemes ?? []),
+        ...(work.details?.structure ?? []),
+        ...(work.details?.characters ?? []),
+        ...(work.details?.quotes ?? []),
+      ];
+
+      return haystack.some((value) => matchesQuery(value, normalizedQuery));
     });
-  }, [works, activeType, query]);
+  }, [works, activeType, normalizedQuery]);
 
   return (
     <div className="space-y-8">
@@ -53,7 +78,7 @@ export function WorksExplorer({ works }: { works: WorkSummary[] }) {
       </div>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {filtered.map((work, index) => (
-          <WorkCard key={work.slug} work={work} index={index} />
+          <WorkCard key={`${work.title}-${work.year}`} work={work} index={index} />
         ))}
       </div>
       {filtered.length === 0 ? (
@@ -64,4 +89,3 @@ export function WorksExplorer({ works }: { works: WorkSummary[] }) {
     </div>
   );
 }
-

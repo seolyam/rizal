@@ -7,7 +7,12 @@
     "lng": 121.1653,
     "dateRange": "1861-1882",
     "story": "Rizal's hometown where his upbringing, early education, and family struggles shaped his sense of justice.",
-    "notes": "Now home to the Rizal Shrine museum."
+    "notes": "Now home to the Rizal Shrine museum.",
+    "highlights": [
+      "Managed by the Mercado family as a prosperous tenancy estate before friar expropriation.",
+      "First learned the alphabet, prayers, and storytelling from his mother, Teodora Alonso.",
+      "Observed colonial land disputes that later informed his reforms for Calamba tenants."
+    ]
   },
   {
     "id": "manila",
@@ -17,7 +22,12 @@
     "lng": 120.9842,
     "dateRange": "1872-1882",
     "story": "Studied at Ateneo Municipal and the University of Santo Tomas; experienced racial discrimination that prompted his move abroad.",
-    "notes": "Sites include Intramuros and the old University campus."
+    "notes": "Sites include Intramuros and the old University campus.",
+    "highlights": [
+      "Graduated sobresaliente from Ateneo with medals in languages, science, and arts.",
+      "Founded the Academia de Bellas Letras for sketches and the Companias de Jesus literary society.",
+      "Witnessed the execution of the Gomburza priests in 1872, which galvanized his political awareness."
+    ]
   },
   {
     "id": "singapore",
@@ -27,7 +37,12 @@
     "lng": 103.8198,
     "dateRange": "1882, 1891",
     "story": "Strategic stopover on Rizal's voyages to and from Europe, where he observed bustling entrep\u00f4ts and wrote about Asian progress outside Spanish control.",
-    "notes": "He penned diary entries noting efficient British administration and multicultural trade districts."
+    "notes": "He penned diary entries noting efficient British administration and multicultural trade districts.",
+    "highlights": [
+      "Recorded impressions of clean streets, multicultural neighborhoods, and British colonial efficiency.",
+      "Met fellow Filipino expatriates who worked on British steamers and discussed reformist ideas.",
+      "Compared Singapore's progress with Manila's stagnation, reinforcing his advocacy for local autonomy."
+    ]
   },
   {
     "id": "madrid",
@@ -37,7 +52,12 @@
     "lng": -3.7038,
     "dateRange": "1882-1885",
     "story": "Pursued medicine and letters at Universidad Central de Madrid while engaging with the Propaganda Movement.",
-    "notes": "Residences along Calle Amor de Dios and Calle Atocha."
+    "notes": "Residences along Calle Amor de Dios and Calle Atocha.",
+    "highlights": [
+      "Completed licentiate degrees in Medicine and Philosophy & Letters.",
+      "Joined the Circulo Hispano-Filipino and wrote for La Solidaridad with Lopez Jaena and Del Pilar.",
+      "Delivered speeches defending Filipino students before the Spanish Cortes."
+    ]
   },
   {
     "id": "paris",
@@ -47,7 +67,12 @@
     "lng": 2.3522,
     "dateRange": "1885-1886",
     "story": "Trained in ophthalmology under Dr. Louis de Weckert; organized compatriots and co-founded the society Indios Bravos.",
-    "notes": "Visited the Biblioth\u00e8que Nationale and Mus\u00e9e du Louvre for research."
+    "notes": "Visited the Biblioth\u00e8que Nationale and Mus\u00e9e du Louvre for research.",
+    "highlights": [
+      "Worked as an assistant in Dr. de Weckert's clinic to support himself financially.",
+      "Organized fencing and athletics sessions with fellow illustrados as part of Indios Bravos.",
+      "Collaborated with Juan Luna and Felix Resurreccion Hidalgo in artistic and political circles."
+    ]
   },
   {
     "id": "heidelberg",
@@ -57,7 +82,12 @@
     "lng": 8.6724,
     "dateRange": "1886",
     "story": "Completed ophthalmology specialization with Professor Otto Becker and wrote the poem 'A Las Flores de Heidelberg'.",
-    "notes": "Strolled along the Philosophenweg overlooking the Neckar River."
+    "notes": "Strolled along the Philosophenweg overlooking the Neckar River.",
+    "highlights": [
+      "Observed advanced hospital techniques and applied them later to treat his mother's cataracts.",
+      "Joined the Akademischer Verein Hahlen to exchange scientific ideas with German scholars.",
+      "Fell in love with the city's botanical gardens, inspiring his iconic poem."
+    ]
   },
   {
     "id": "brussels",
@@ -67,7 +97,12 @@
     "lng": 4.3517,
     "dateRange": "1890-1891",
     "story": "Worked with Jos\u00e9 Alejandro and Eduardo de Lete on preparing El Filibusterismo while living frugally and writing essays for La Solidaridad.",
-    "notes": "Resided at 38 Rue Philippe de Champagne, sharing lodgings with compatriots."
+    "notes": "Resided at 38 Rue Philippe de Champagne, sharing lodgings with compatriots.",
+    "highlights": [
+      "Corrected proofs of El Filibusterismo and tracked publication costs carefully.",
+      "Penned essays such as 'Sobre la Indolencia de los Filipinos' in response to colonial stereotypes.",
+      "Regularly visited the Jardin Botanique for sketching sessions and language practice."
+    ]
   },
   {
     "id": "biarritz",
@@ -77,7 +112,12 @@
     "lng": -1.5586,
     "dateRange": "1891",
     "story": "Stayed with the Boustedt family, revising chapters of El Filibusterismo and reflecting on the financial strain of publication.",
-    "notes": "Enjoyed seaside walks that influenced his descriptive passages about coastal Philippines."
+    "notes": "Enjoyed seaside walks that influenced his descriptive passages about coastal Philippines.",
+    "highlights": [
+      "Reconnected with the Boustead sisters and refined philosophical dialogues in El Fili.",
+      "Wrote letters seeking financial backing for the novel's printing in Ghent.",
+      "Sketched Atlantic coastal scenes that later appeared in his travel diaries."
+    ]
   },
   {
     "id": "london",
@@ -87,7 +127,12 @@
     "lng": -0.1276,
     "dateRange": "1888-1889",
     "story": "Researched Philippine history at the British Museum and annotated Antonio de Morga's 'Sucesos de las Islas Filipinas'.",
-    "notes": "Lodged at 37 Chalcot Crescent in Primrose Hill."
+    "notes": "Lodged at 37 Chalcot Crescent in Primrose Hill.",
+    "highlights": [
+      "Worked with reformist Marcelo H. del Pilar in editing La Solidaridad articles.",
+      "Met Ferdinand Blumentritt in person after years of scholarly correspondence.",
+      "Copied rare manuscripts on precolonial Philippines to support his historical annotations."
+    ]
   },
   {
     "id": "yokohama",
@@ -97,7 +142,12 @@
     "lng": 139.638,
     "dateRange": "1888",
     "story": "Rizal briefly stayed in Yokohama and Tokyo, admiring Japan's modernization and cultural pride\u2014an inspiration for his hopes for the Philippines.",
-    "notes": "Met Spanish Legation officials and a young woman, Seiko Usui, who broadened his views on Asian identity."
+    "notes": "Met Spanish Legation officials and a young woman, Seiko Usui, who broadened his views on Asian identity.",
+    "highlights": [
+      "Stayed at the Grand Hotel in Yokohama before moving to the Spanish Legation in Tokyo.",
+      "Studied Japanese art, theatre, and tea ceremonies, noting shared Asian heritage.",
+      "Considered settling in Japan with Seiko Usui but chose to continue his reform mission."
+    ]
   },
   {
     "id": "hong-kong",
@@ -107,7 +157,12 @@
     "lng": 114.1694,
     "dateRange": "1891-1892",
     "story": "Set up an ophthalmology clinic on D'Aguilar Street and reunited with family members seeking refuge from political persecution in Calamba.",
-    "notes": "Documented colonial legal proceedings for Calamba tenants with the help of reformist allies."
+    "notes": "Documented colonial legal proceedings for Calamba tenants with the help of reformist allies.",
+    "highlights": [
+      "Performed successful eye operations, earning referrals from Chinese and European patients.",
+      "Organized evidence and affidavits for the Calamba agrarian case against the Dominicans.",
+      "Planned the founding of La Liga Filipina before his return to Manila."
+    ]
   },
   {
     "id": "dapitan",
@@ -117,6 +172,11 @@
     "lng": 123.4227,
     "dateRange": "1892-1896",
     "story": "Exiled by the Spanish colonial government; established a school, hospital, water system, and community projects.",
-    "notes": "Declared a national heritage zone featuring the Casa Real and Talisay estate."
+    "notes": "Declared a national heritage zone featuring the Casa Real and Talisay estate.",
+    "highlights": [
+      "Designed a gravity-fed waterworks system and street lighting for the town center.",
+      "Opened a school that taught languages, agriculture, and trades to local boys.",
+      "Conducted scientific research, cataloguing flora and fauna later named in his honor."
+    ]
   }
 ]

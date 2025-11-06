@@ -2,12 +2,11 @@
 
 import { geoMercator, geoPath } from "d3-geo";
 import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useMemo, useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import type { TravelSpot } from "@/lib/schemas";
 import { worldFeatures } from "@/lib/world";
 import { usePreferencesStore } from "@/stores/preferences-store";
+import { cn } from "@/lib/utils";
 
 const MAP_WIDTH = 700;
 const MAP_HEIGHT = 420;
@@ -17,8 +16,9 @@ type TravelMapProps = {
 };
 
 export function TravelMap({ spots }: TravelMapProps) {
-  const [active, setActive] = useState<TravelSpot | null>(null);
+  const [index, setIndex] = useState(0);
   const { prefersReducedMotion } = usePreferencesStore();
+  const active = spots[index] ?? null;
 
   const projection = useMemo(() => {
     return geoMercator().scale(110).translate([MAP_WIDTH / 2, MAP_HEIGHT / 1.6]);
@@ -47,13 +47,52 @@ export function TravelMap({ spots }: TravelMapProps) {
     return { x: coords[0], y: coords[1] };
   }, [active, projection]);
 
-  const handleActivate = useCallback((spot: TravelSpot) => {
-    setActive(spot);
+  const goNext = useCallback(() => {
+    setIndex((prev) => {
+      const next = prev + 1;
+      if (!spots.length) return 0;
+      if (next >= spots.length) {
+        return spots.length - 1;
+      }
+      return next;
+    });
+  }, [spots.length]);
+
+  const goPrev = useCallback(() => {
+    setIndex((prev) => {
+      const next = prev - 1;
+      if (next < 0) return 0;
+      return next;
+    });
   }, []);
 
+  useEffect(() => {
+    const handleKeydown = (event: KeyboardEvent) => {
+      if (event.defaultPrevented) return;
+      const target = event.target as HTMLElement | null;
+      if (target) {
+        const tag = target.tagName.toLowerCase();
+        if (tag === "input" || tag === "textarea" || target.isContentEditable) {
+          return;
+        }
+      }
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        goNext();
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        goPrev();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeydown);
+    return () => window.removeEventListener("keydown", handleKeydown);
+  }, [goNext, goPrev]);
+
   return (
-    <div className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
-      <div className="paper-surface grain-overlay flex flex-col gap-4 rounded-3xl border border-border/60 p-4 shadow-soft">
+    <div className="flex flex-col items-center gap-10">
+      <div className="w-full max-w-6xl">
+        <div className="paper-surface grain-overlay flex flex-col gap-6 rounded-[48px] border border-border/60 p-8 shadow-soft">
         <svg
           viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
           role="img"
@@ -62,7 +101,7 @@ export function TravelMap({ spots }: TravelMapProps) {
               ? `World map focused on ${active.place}, ${active.country}`
               : "World map for Rizal's journeys. Select a location card to reveal pins."
           }
-          className="h-auto w-full rounded-[30px] border border-border/40 bg-parchment/80"
+          className="h-auto w-full rounded-[40px] border border-border/40 bg-parchment/80 shadow-soft"
         >
           <defs>
             <radialGradient id="pinGradient" cx="50%" cy="50%" r="50%">
@@ -117,16 +156,10 @@ export function TravelMap({ spots }: TravelMapProps) {
                   cy={activeCoordinates.y}
                   r={7}
                   fill="#3b8070"
-                  className="cursor-pointer"
+                  className="cursor-default"
                   initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.6 }}
                   animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
                   transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                  onMouseEnter={() => handleActivate(active)}
-                  onFocus={() => handleActivate(active)}
-                  onClick={() => handleActivate(active)}
-                  tabIndex={0}
-                  role="button"
-                  aria-pressed="true"
                   aria-label={`${active.place}, ${active.country}`}
                 />
                 <motion.text
@@ -151,18 +184,66 @@ export function TravelMap({ spots }: TravelMapProps) {
               animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
               exit={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: -12 }}
               transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-2xl border border-border/60 bg-background/90 p-5 text-sm leading-relaxed text-muted-foreground shadow-sm"
+              className="rounded-[30px] border border-border/60 bg-background/95 p-6 text-base leading-relaxed text-foreground/80 shadow-sm md:p-10 md:text-lg"
             >
-              <div className="flex flex-wrap items-center justify-between gap-3">
-                <p className="font-serif text-lg text-foreground">{active.place}</p>
-                <span className="text-xs uppercase tracking-[0.3em] text-primary">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div>
+                  <p className="font-serif text-3xl font-semibold text-foreground">{active.place}</p>
+                  <p className="mt-1 text-sm uppercase tracking-[0.25em] text-secondary">
+                    {active.country}
+                  </p>
+                </div>
+                <span className="rounded-full border border-border/50 px-4 py-2 text-sm uppercase tracking-[0.2em] text-primary">
                   {active.dateRange}
                 </span>
               </div>
-              <p className="mt-3">{active.story}</p>
-              {active.notes ? (
-                <p className="mt-3 text-xs uppercase tracking-[0.3em] text-secondary">{active.notes}</p>
+              <p className="mt-4 text-foreground/80 md:text-[1.05rem] md:leading-relaxed">{active.story}</p>
+              {active.highlights && active.highlights.length > 0 ? (
+                <ul className="mt-4 space-y-2 text-left text-sm leading-relaxed text-muted-foreground">
+                  {active.highlights.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-secondary/70" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               ) : null}
+              {active.notes ? (
+                <p className="mt-4 text-sm uppercase tracking-[0.25em] text-secondary">{active.notes}</p>
+              ) : null}
+              <div className="mt-6 flex items-center justify-between gap-4">
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  disabled={index === 0}
+                  className={cn(
+                    "flex h-12 w-12 items-center justify-center rounded-full border border-border/60 text-lg transition",
+                    index === 0
+                      ? "cursor-not-allowed opacity-40"
+                      : "hover:bg-accent hover:text-foreground",
+                  )}
+                  aria-label="Previous location"
+                >
+                  ←
+                </button>
+                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  Stop {index + 1} of {spots.length}
+                </p>
+                <button
+                  type="button"
+                  onClick={goNext}
+                  disabled={index === spots.length - 1}
+                  className={cn(
+                    "flex h-12 w-12 items-center justify-center rounded-full border border-border/60 text-lg transition",
+                    index === spots.length - 1
+                      ? "cursor-not-allowed opacity-40"
+                      : "hover:bg-accent hover:text-foreground",
+                  )}
+                  aria-label="Next location"
+                >
+                  →
+                </button>
+              </div>
             </motion.div>
           ) : (
             <motion.div
@@ -171,59 +252,14 @@ export function TravelMap({ spots }: TravelMapProps) {
               animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
               exit={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: -12 }}
               transition={{ duration: prefersReducedMotion ? 0 : 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="rounded-2xl border border-primary/30 bg-primary/5 px-6 py-4 font-serif text-lg text-primary"
+              className="rounded-[30px] border border-primary/30 bg-primary/10 px-6 py-6 text-center font-serif text-xl text-primary shadow-sm"
             >
               Select a journey card to illuminate Rizal&apos;s path across the map.
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-      <div className="space-y-4">
-        {spots.map((spot) => {
-          const isActive = active?.id === spot.id;
-          return (
-            <button
-              key={spot.id}
-              onMouseEnter={() => handleActivate(spot)}
-              onFocus={() => handleActivate(spot)}
-              onClick={() => handleActivate(spot)}
-              className="w-full text-left"
-            >
-              <Card
-                className={
-                  isActive
-                    ? "paper-surface border-secondary/70 bg-secondary/10 text-foreground shadow-soft supports-hover:hover:border-secondary"
-                    : "paper-surface border-border/60 bg-card"
-                }
-              >
-                <CardHeader className="flex flex-col gap-2">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <CardTitle className="text-lg">{spot.place}</CardTitle>
-                    <Badge variant="outline">{spot.country}</Badge>
-                  </div>
-                  <CardDescription className="text-xs uppercase tracking-[0.3em]">
-                    {spot.dateRange}
-                  </CardDescription>
-                </CardHeader>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {spot.story}
-                </p>
-                {spot.notes ? (
-                  <p className="mt-3 text-xs font-medium uppercase tracking-widest text-primary">
-                    {spot.notes}
-                  </p>
-                ) : null}
-              </Card>
-            </button>
-          );
-        })}
-        {!active ? (
-          <p className="rounded-2xl border border-border/60 bg-card/70 p-4 text-sm text-muted-foreground">
-            Hint: begin with Calamba or Manila to see how his first voyages shaped the journeys that
-            followed.
-          </p>
-        ) : null}
-      </div>
     </div>
+  </div>
   );
 }

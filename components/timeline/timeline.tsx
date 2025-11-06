@@ -38,7 +38,7 @@ export function Timeline({ events }: TimelineProps) {
       if (value >= grouped.length) return grouped.length - 1;
       return value;
     },
-    [grouped.length],
+    [grouped.length]
   );
 
   const goNext = useCallback(() => {
@@ -66,11 +66,13 @@ export function Timeline({ events }: TimelineProps) {
 
   const safeIndex = useMemo(
     () => clampIndex(currentIndex),
-    [clampIndex, currentIndex],
+    [clampIndex, currentIndex]
   );
 
   const activeTuple = grouped[safeIndex];
-  const progress = grouped.length ? ((safeIndex + 1) / grouped.length) * 100 : 0;
+  const progress = grouped.length
+    ? ((safeIndex + 1) / grouped.length) * 100
+    : 0;
 
   return (
     <div className="relative grid gap-10 md:grid-cols-[220px_1fr]">
@@ -79,7 +81,7 @@ export function Timeline({ events }: TimelineProps) {
         className="pointer-events-none absolute inset-y-0 left-16 hidden w-px bg-gradient-to-b from-transparent via-border/60 to-transparent md:block"
       />
       <aside className="md:sticky md:top-24">
-        <ScrollArea className="paper-surface ink-outline max-h-[70vh] rounded-3xl border border-border/60 p-4">
+        <ScrollArea className="paper-surface ink-outline rounded-3xl border border-border/60 p-4 md:max-h-none">
           <ol className="space-y-3 text-sm font-medium text-muted-foreground">
             {grouped.map(([year], index) => {
               const isActive = index === safeIndex;
@@ -93,13 +95,13 @@ export function Timeline({ events }: TimelineProps) {
                       "flex w-full items-center gap-3 rounded-full px-3 py-2 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2",
                       isActive
                         ? "bg-secondary/15 text-foreground"
-                        : "hover:bg-accent hover:text-foreground",
+                        : "hover:bg-accent hover:text-foreground"
                     )}
                   >
                     <span
                       className={cn(
                         "h-2 w-2 rounded-full transition",
-                        isActive ? "bg-secondary" : "bg-border/70",
+                        isActive ? "bg-secondary" : "bg-border/70"
                       )}
                     />
                     {year}
@@ -135,7 +137,7 @@ export function Timeline({ events }: TimelineProps) {
                   "rounded-full border border-border/60 px-4 py-2 text-xs uppercase tracking-[0.3em] transition",
                   safeIndex === 0
                     ? "cursor-not-allowed opacity-40"
-                    : "hover:bg-accent hover:text-foreground",
+                    : "hover:bg-accent hover:text-foreground"
                 )}
                 aria-label="Previous era"
               >
@@ -149,7 +151,7 @@ export function Timeline({ events }: TimelineProps) {
                   "rounded-full border border-border/60 px-4 py-2 text-xs uppercase tracking-[0.3em] transition",
                   safeIndex === grouped.length - 1
                     ? "cursor-not-allowed opacity-40"
-                    : "hover:bg-accent hover:text-foreground",
+                    : "hover:bg-accent hover:text-foreground"
                 )}
                 aria-label="Next era"
               >
@@ -164,9 +166,6 @@ export function Timeline({ events }: TimelineProps) {
               aria-hidden
             />
           </div>
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            Use arrow keys or the controls to turn through the journal.
-          </p>
         </div>
         <div className="relative min-h-[420px]">
           <AnimatePresence mode="wait">
@@ -176,8 +175,15 @@ export function Timeline({ events }: TimelineProps) {
                 variants={prefersReducedMotion ? undefined : pageTurn}
                 initial={prefersReducedMotion ? "show" : "hidden"}
                 animate="show"
-                exit={prefersReducedMotion ? "show" : { opacity: 0, rotateX: -8, y: 12 }}
-                transition={{ duration: prefersReducedMotion ? 0 : 0.7, ease: [0.16, 1, 0.3, 1] }}
+                exit={
+                  prefersReducedMotion
+                    ? "show"
+                    : { opacity: 0, rotateX: -8, y: 12 }
+                }
+                transition={{
+                  duration: prefersReducedMotion ? 0 : 0.7,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[36px] border border-border/60 bg-card/95 p-8 shadow-soft paper-surface ink-outline"
                 aria-live="polite"
               >
@@ -198,7 +204,9 @@ export function Timeline({ events }: TimelineProps) {
                           </span>
                         ) : null}
                         {event.tags.length ? (
-                          <span className="hidden text-border/80 md:block">·</span>
+                          <span className="hidden text-border/80 md:block">
+                            ·
+                          </span>
                         ) : null}
                         <span>{event.tags.join(" · ")}</span>
                       </div>
@@ -222,7 +230,7 @@ export function Timeline({ events }: TimelineProps) {
                 </div>
                 <div className="mt-8 flex flex-wrap items-center justify-between gap-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">
                   <span>
-                Era {safeIndex + 1} of {grouped.length}
+                    Era {safeIndex + 1} of {grouped.length}
                   </span>
                   <span>{activeTuple[1].length} entries</span>
                 </div>

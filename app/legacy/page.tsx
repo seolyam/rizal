@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MotionSection } from "@/components/sections/motion-section";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { QuoteCard } from "@/components/quotes/quote-card";
+import { TourControls } from "@/components/tour/tour-controls";
 import { getQuotes } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -87,13 +88,15 @@ export default function LegacyPage() {
 
   return (
     <div className="space-y-24 pb-24">
-      <MotionSection className="container space-y-8">
+      <MotionSection className="container">
+        <TourControls className="mx-auto max-w-3xl" />
+      </MotionSection>
+      <MotionSection className="container space-y-6 text-center">
         <SectionHeading
-          eyebrow="Living Memory"
           title="Why Rizal still matters"
           description="Beyond novels and monuments, Rizal's legacy shapes education policy, civic spaces, and the language of rights across the Philippines and the diaspora."
         />
-        <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">
+        <p className="mx-auto max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
           Each generation revisits Rizal to ask how ethical leadership, intercultural exchange, and
           scientific inquiry can serve the common good. This page gathers classroom-ready context on
           how his influence evolved after 1896 and why the Rizal Law still frames historical
@@ -101,9 +104,8 @@ export default function LegacyPage() {
         </p>
       </MotionSection>
 
-      <MotionSection className="container space-y-10">
+      <MotionSection className="container space-y-8 text-center">
         <SectionHeading
-          eyebrow="National Milestones"
           title="A century of remembrance"
           description="Key dates that kept Rizal at the heart of civic rituals and public discourse."
         />
@@ -129,7 +131,6 @@ export default function LegacyPage() {
 
       <MotionSection className="container space-y-10">
         <SectionHeading
-          eyebrow="Continuing Legacies"
           title="Where we meet Rizal today"
           description="From plazas to policy debates, Rizal's ideas animate how communities imagine nationhood."
         />
@@ -148,7 +149,6 @@ export default function LegacyPage() {
 
       <MotionSection className="container space-y-10">
         <SectionHeading
-          eyebrow="Classroom Prompts"
           title="Learning activities inspired by Rizal Law"
           description="Blend humanities, social science, and civic skills with these adaptable ideas."
         />
@@ -169,7 +169,6 @@ export default function LegacyPage() {
 
       <MotionSection className="container space-y-10">
         <SectionHeading
-          eyebrow="Quotable Rizal"
           title="Lines that shaped civic imagination"
           description="Use these quotes as writing prompts, debate starters, or social media explainers for Rizal Month."
         />

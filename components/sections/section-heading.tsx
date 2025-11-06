@@ -12,7 +12,7 @@ export function SectionHeading({
   className?: string;
 }) {
   return (
-    <div className={cn("space-y-3", className)}>
+    <div className={cn("space-y-3 text-center", className)}>
       {eyebrow ? (
         <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.3em] text-primary">
           {eyebrow}
@@ -22,7 +22,7 @@ export function SectionHeading({
         {title}
       </h2>
       {description ? (
-        <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+        <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
           {description}
         </p>
       ) : null}

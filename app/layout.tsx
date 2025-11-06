@@ -9,7 +9,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { fraunces, inter, mono } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
-const siteName = "dYZ · Jose Rizal Interactive Tribute";
+const siteName = "Rizal";
 const siteDescription =
   "A creative, accessible, and research-backed celebration of Dr. José Rizal—his life, works, travels, and legacy—through interactive storytelling.";
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rizal-tribute.local"),
   title: {
     default: siteName,
-    template: "%s · Rizal Interactive Tribute",
+    template: "%s · Rizal",
   },
   description: siteDescription,
   openGraph: {
@@ -40,10 +40,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7e8d4" },
-    { media: "(prefers-color-scheme: dark)", color: "#1f1914" },
-  ],
+  themeColor: "#f7e8d4",
 };
 
 export default function RootLayout({

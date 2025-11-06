@@ -6,7 +6,7 @@ import { getPageMdx } from "@/lib/mdx";
 export const metadata: Metadata = {
   title: "About the Project",
   description:
-    "How the dYZ Rizal tribute was researched, designed, and developed for students and educators.",
+    "How the Rizal tribute was researched, designed, and developed for students and educators.",
 };
 
 export default async function AboutPage() {
@@ -14,7 +14,6 @@ export default async function AboutPage() {
   return (
     <div className="container space-y-12 py-16">
       <SectionHeading
-        eyebrow="About"
         title={frontmatter.title}
         description={frontmatter.lead}
       />

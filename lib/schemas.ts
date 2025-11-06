@@ -20,6 +20,7 @@ export const travelSpotSchema = z.object({
   dateRange: z.string(),
   story: z.string(),
   notes: z.string().optional(),
+  highlights: z.array(z.string()).optional(),
 });
 
 export type TravelSpot = z.infer<typeof travelSpotSchema>;
@@ -33,21 +34,12 @@ export const quoteSchema = z.object({
 
 export type Quote = z.infer<typeof quoteSchema>;
 
-export const workSummarySchema = z.object({
-  slug: z.string(),
-  title: z.string(),
-  year: z.number(),
-  type: z.string(),
-  tags: z.array(z.string()),
-  excerpt: z.string(),
-});
-
-export type WorkSummary = z.infer<typeof workSummarySchema>;
-
 export const workFrontmatterSchema = z.object({
   title: z.string(),
   year: z.number(),
   type: z.string(),
+  excerpt: z.string(),
+  tags: z.array(z.string()).min(1),
   readingTime: z.number().optional(),
   summary: z.string().optional(),
   sources: z
@@ -62,6 +54,38 @@ export const workFrontmatterSchema = z.object({
 });
 
 export type WorkFrontmatter = z.infer<typeof workFrontmatterSchema>;
+
+export const workSourceSchema = z.object({
+  title: z.string(),
+  author: z.string().optional(),
+  url: z.string().url().optional(),
+});
+
+export const workDetailsSchema = z.object({
+  genre: z.string().optional(),
+  summary: z.string().optional(),
+  majorThemes: z.array(z.string()).default([]),
+  structure: z.array(z.string()).default([]),
+  characters: z.array(z.string()).default([]),
+  historicalImpact: z.string().optional(),
+  quotes: z.array(z.string()).default([]),
+  sources: z.array(workSourceSchema).default([]),
+});
+
+export const workSchema = z.object({
+  title: z.string(),
+  year: z.number(),
+  type: z.string(),
+  readingTime: z.number().optional(),
+  excerpt: z.string(),
+  tags: z.array(z.string()).min(1),
+  summary: z.string(),
+  details: workDetailsSchema.default({}),
+});
+
+export type WorkDetails = z.infer<typeof workDetailsSchema>;
+
+export type WorkSummary = z.infer<typeof workSchema>;
 
 export const quizQuestionSchema = z.object({
   id: z.string(),
