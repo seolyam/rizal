@@ -1,13 +1,14 @@
 "use client";
 
 import { useMemo } from "react";
+import type { Route } from "next";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ProgressBar } from "@/components/ui/progress-bar";
 import { getTourStepIndex, tourSteps } from "@/lib/tour";
 import { cn } from "@/lib/utils";
 
-type TourControlsProps = {
+export type TourControlsProps = {
   className?: string;
 };
 
@@ -17,23 +18,31 @@ export function TourControls({ className }: TourControlsProps) {
   const searchParams = useSearchParams();
   const inTour = searchParams.get("tour") === "1";
 
-  const { index, progress, prevHref, nextHref, nextLabel } = useMemo(() => {
+  const { index, progress, prevHref, nextHref, nextLabel } = useMemo<{
+    index: number;
+    progress: number;
+    prevHref: Route | null;
+    nextHref: Route;
+    nextLabel: string;
+  }>(() => {
     const currentIndex = getTourStepIndex(pathname);
     const total = tourSteps.length;
     if (currentIndex === -1) {
       return {
         index: -1,
         progress: 0,
-        prevHref: null as string | null,
-        nextHref: null as string | null,
+        prevHref: null,
+        nextHref: "/" as Route,
         nextLabel: "Next",
       };
     }
-    const prev =
-      currentIndex > 0 ? `${tourSteps[currentIndex - 1].href}?tour=1` : null;
-    const next =
+    const prev: Route | null =
+      currentIndex > 0
+        ? tourSteps[currentIndex - 1].href
+        : null;
+    const next: Route =
       currentIndex < total - 1
-        ? `${tourSteps[currentIndex + 1].href}?tour=1`
+        ? tourSteps[currentIndex + 1].href
         : "/";
 
     return {
@@ -51,13 +60,15 @@ export function TourControls({ className }: TourControlsProps) {
 
   const handlePrev = () => {
     if (prevHref) {
-      router.push(prevHref);
+      const target = inTour ? (`${prevHref}?tour=1` as Route) : prevHref;
+      router.push(target);
     }
   };
 
   const handleNext = () => {
     if (nextHref) {
-      router.push(nextHref);
+      const target = inTour ? (`${nextHref}?tour=1` as Route) : nextHref;
+      router.push(target);
     }
   };
 

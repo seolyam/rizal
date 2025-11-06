@@ -11,6 +11,7 @@ import { mdxComponents } from "@/components/mdx/mdx-components";
 import {
   workFrontmatterSchema,
   pageFrontmatterSchema,
+  workDetailsSchema,
   type WorkFrontmatter,
   type PageFrontmatter,
   type WorkSummary,
@@ -40,7 +41,9 @@ export async function getWorkSummary(slug: string): Promise<WorkSummary | undefi
       type: frontmatter.type,
       excerpt: frontmatter.excerpt,
       tags: frontmatter.tags,
-      summary: frontmatter.summary,
+      summary: frontmatter.summary ?? frontmatter.excerpt,
+      readingTime: frontmatter.readingTime,
+      details: workDetailsSchema.parse({}),
     };
   } catch (error) {
     if (error instanceof Error && "code" in error && (error as NodeJS.ErrnoException).code === "ENOENT") {

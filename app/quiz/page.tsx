@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { QuizInteractive } from "@/components/quiz/quiz-interactive";
 import { SectionHeading } from "@/components/sections/section-heading";
-import { TourControls } from "@/components/tour/tour-controls";
+import { TourControlsBoundary } from "@/components/tour/tour-controls-boundary";
 import { getQuizQuestions } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function QuizPage() {
   const questions = getQuizQuestions();
   return (
     <div className="container space-y-12 py-16">
-      <TourControls className="mx-auto max-w-3xl" />
+      <TourControlsBoundary className="mx-auto max-w-3xl" />
       <SectionHeading
         title="Assess your understanding"
         description="Shuffle through questions aligned with the timeline and works explorer. Explanations and citations appear after each answer."

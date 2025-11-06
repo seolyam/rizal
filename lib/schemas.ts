@@ -73,6 +73,7 @@ export const workDetailsSchema = z.object({
 });
 
 export const workSchema = z.object({
+  slug: z.string().optional(),
   title: z.string(),
   year: z.number(),
   type: z.string(),

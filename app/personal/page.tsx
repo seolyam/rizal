@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Card } from "@/components/ui/card";
-import { TourControls } from "@/components/tour/tour-controls";
+import { TourControlsBoundary } from "@/components/tour/tour-controls-boundary";
 
 export const metadata: Metadata = {
   title: "Personal Profile",
@@ -52,7 +52,7 @@ const personalNotes = [
 export default function PersonalPage() {
   return (
     <div className="container space-y-12 py-16">
-      <TourControls className="mx-auto max-w-3xl" />
+      <TourControlsBoundary className="mx-auto max-w-3xl" />
       <SectionHeading
         title="José Rizal · Personal Profile"
         description="A concise reference to Rizal’s background, education, relationships, and personal convictions based on primary summaries in informations.md."

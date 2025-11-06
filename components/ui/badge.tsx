@@ -8,6 +8,8 @@ const badgeVariants = {
     "inline-flex items-center rounded-full border border-border/60 bg-accent px-3 py-1 text-xs font-medium uppercase tracking-wide text-accent-foreground",
   outline:
     "inline-flex items-center rounded-full border border-border/70 px-3 py-1 text-xs font-medium uppercase tracking-wide text-muted-foreground",
+  secondary:
+    "inline-flex items-center rounded-full border border-secondary/50 bg-secondary/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-secondary",
 };
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {

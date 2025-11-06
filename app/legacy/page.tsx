@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { MotionSection } from "@/components/sections/motion-section";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { QuoteCard } from "@/components/quotes/quote-card";
-import { TourControls } from "@/components/tour/tour-controls";
+import { TourControlsBoundary } from "@/components/tour/tour-controls-boundary";
 import { getQuotes } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -89,7 +89,7 @@ export default function LegacyPage() {
   return (
     <div className="space-y-24 pb-24">
       <MotionSection className="container">
-        <TourControls className="mx-auto max-w-3xl" />
+        <TourControlsBoundary className="mx-auto max-w-3xl" />
       </MotionSection>
       <MotionSection className="container space-y-6 text-center">
         <SectionHeading
