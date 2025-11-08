@@ -117,10 +117,17 @@ export const ideaSchema = z.object({
 
 export type Idea = z.infer<typeof ideaSchema>;
 
+const rootRelativePathSchema = z
+  .string()
+  .regex(
+    /^\/[A-Za-z0-9/_\-.]+$/,
+    "Must be a valid root-relative path (e.g., /images/photo.jpg)",
+  );
+
 export const galleryItemSchema = z.object({
   id: z.string(),
   title: z.string(),
-  image: z.string().url(),
+  image: z.union([z.string().url(), rootRelativePathSchema]),
   caption: z.string(),
   credit: z.string(),
 });

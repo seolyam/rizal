@@ -11,6 +11,12 @@ export default async function Home() {
           highlightedText="Lifeways in Motion"
           description="Explore the life, travels, and legacy of the Philippine national hero through animated timelines, annotated works, and classroom-ready resources."
           tourSteps={tourSteps}
+          heroImage={{
+            src: "/images/jose-rizal.jpg",
+            alt: "Studio portrait of José Rizal wearing an overcoat",
+            caption: "José Rizal, c. 1896",
+            credit: "Public Domain",
+          }}
         />
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import type { Route } from "next";
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -22,6 +23,14 @@ type ParallaxHeroProps = {
   primaryCta?: HeroCTA;
   secondaryCta?: HeroCTA;
   tourSteps?: TourStep[];
+  heroImage?: {
+    src: string;
+    alt: string;
+    caption?: string;
+    credit?: string;
+    width?: number;
+    height?: number;
+  };
 };
 
 export function ParallaxHero({
@@ -32,6 +41,7 @@ export function ParallaxHero({
   primaryCta,
   secondaryCta,
   tourSteps,
+  heroImage,
 }: ParallaxHeroProps) {
   const { prefersReducedMotion } = usePreferencesStore();
   const hasTour = Array.isArray(tourSteps) && tourSteps.length > 0;
@@ -77,7 +87,7 @@ export function ParallaxHero({
 
       <div className="px-8 py-16 md:px-14 md:py-20 lg:px-20 lg:py-24">
         <motion.div
-          className="mx-auto flex max-w-5xl flex-col gap-10"
+          className={`mx-auto flex max-w-6xl flex-col gap-10 ${heroImage ? "lg:grid lg:grid-cols-[1.05fr,0.95fr] lg:items-center lg:gap-16" : ""}`}
           variants={prefersReducedMotion ? undefined : staggerChildren}
           initial={prefersReducedMotion ? undefined : "hidden"}
           animate={prefersReducedMotion ? undefined : "show"}
@@ -207,6 +217,35 @@ export function ParallaxHero({
               </motion.p>
             </>
           )}
+
+          {heroImage ? (
+            <motion.div
+              variants={prefersReducedMotion ? undefined : inkReveal}
+              className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none"
+            >
+              <div className="relative overflow-hidden rounded-[36px] border border-border/60 bg-card shadow-2xl shadow-primary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-secondary/10 mix-blend-soft-light" />
+                <Image
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  width={heroImage.width ?? 768}
+                  height={heroImage.height ?? 960}
+                  priority
+                  className="relative z-10 h-full w-full object-cover object-top"
+                />
+                {heroImage.caption || heroImage.credit ? (
+                  <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-background/90 via-background/30 to-transparent p-6 text-sm text-muted-foreground">
+                    {heroImage.caption ? (
+                      <p className="font-medium text-foreground">{heroImage.caption}</p>
+                    ) : null}
+                    {heroImage.credit ? (
+                      <p className="mt-1 text-xs uppercase tracking-[0.3em]">{heroImage.credit}</p>
+                    ) : null}
+                  </div>
+                ) : null}
+              </div>
+            </motion.div>
+          ) : null}
         </motion.div>
       </div>
 

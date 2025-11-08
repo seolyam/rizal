@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Card } from "@/components/ui/card";
 import { TourControlsBoundary } from "@/components/tour/tour-controls-boundary";
@@ -10,7 +11,10 @@ export const metadata: Metadata = {
 };
 
 const familyDetails = [
-  { label: "Full name", value: "José Protasio Rizal Mercado y Alonso Realonda" },
+  {
+    label: "Full name",
+    value: "José Protasio Rizal Mercado y Alonso Realonda",
+  },
   { label: "Nickname", value: "Pepe" },
   { label: "Birth", value: "June 19, 1861 · Calamba, Laguna, Philippines" },
   {
@@ -58,9 +62,28 @@ export default function PersonalPage() {
         description="A concise reference to Rizal’s background, education, relationships, and personal convictions based on primary summaries in informations.md."
       />
 
+      <figure className="mx-auto flex flex-col items-center gap-3 text-center">
+        <div className="relative h-48 w-48 overflow-hidden rounded-full border border-border/70 bg-card/60 shadow-lg shadow-primary/20 sm:h-60 sm:w-60">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-transparent to-secondary/20 mix-blend-soft-light" />
+          <Image
+            src="/images/jose-rizal.jpg"
+            alt="José Rizal in a formal studio portrait"
+            fill
+            sizes="(max-width: 640px) 12rem, 15rem"
+            priority
+            className="relative z-10 object-cover object-top"
+          />
+        </div>
+        <figcaption className="text-sm text-muted-foreground">
+          <p className="font-medium text-foreground/90">José Rizal</p>
+        </figcaption>
+      </figure>
+
       <Card className="grid gap-6 border-border/60 bg-card/85 p-8 shadow-sm md:grid-cols-2">
         <div className="space-y-4">
-          <h3 className="font-serif text-xl font-semibold text-foreground">Family & Origins</h3>
+          <h3 className="font-serif text-xl font-semibold text-foreground">
+            Family & Origins
+          </h3>
           <dl className="space-y-3 text-sm leading-relaxed text-muted-foreground">
             {familyDetails.map((item) => (
               <div key={item.label}>
@@ -73,11 +96,15 @@ export default function PersonalPage() {
           </dl>
         </div>
         <div className="space-y-4">
-          <h3 className="font-serif text-xl font-semibold text-foreground">Education & Training</h3>
+          <h3 className="font-serif text-xl font-semibold text-foreground">
+            Education & Training
+          </h3>
           <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
             {educationDetails.map((detail, index) => (
               <li key={index} className="flex gap-3">
-                <span className="font-mono text-xs font-semibold text-secondary">{index + 1}.</span>
+                <span className="font-mono text-xs font-semibold text-secondary">
+                  {index + 1}.
+                </span>
                 <span>{detail}</span>
               </li>
             ))}
@@ -87,16 +114,20 @@ export default function PersonalPage() {
 
       <Card className="space-y-6 border-border/60 bg-card/85 p-8 shadow-sm">
         <div className="space-y-2">
-          <h3 className="font-serif text-xl font-semibold text-foreground">Achievements</h3>
+          <h3 className="font-serif text-xl font-semibold text-foreground">
+            Achievements
+          </h3>
           <p className="text-sm text-muted-foreground">
-            Reformist work spanned literature, science, medicine, and education—all executed with an
-            eye toward national dignity.
+            Reformist work spanned literature, science, medicine, and
+            education—all executed with an eye toward national dignity.
           </p>
         </div>
         <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
           {achievements.map((achievement, index) => (
             <li key={index} className="flex gap-3">
-              <span className="font-mono text-xs font-semibold text-secondary">{index + 1}.</span>
+              <span className="font-mono text-xs font-semibold text-secondary">
+                {index + 1}.
+              </span>
               <span>{achievement}</span>
             </li>
           ))}
@@ -105,16 +136,20 @@ export default function PersonalPage() {
 
       <Card className="space-y-6 border-border/60 bg-card/85 p-8 shadow-sm">
         <div className="space-y-2">
-          <h3 className="font-serif text-xl font-semibold text-foreground">Personal Notes</h3>
+          <h3 className="font-serif text-xl font-semibold text-foreground">
+            Personal Notes
+          </h3>
           <p className="text-sm text-muted-foreground">
-            Glimpses into Rizal’s personality, relationships, skills, and beliefs drawn directly from
-            the compiled informations.md brief.
+            Glimpses into Rizal’s personality, relationships, skills, and
+            beliefs drawn directly from the compiled informations.md brief.
           </p>
         </div>
         <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
           {personalNotes.map((note, index) => (
             <li key={index} className="flex gap-3">
-              <span className="font-mono text-xs font-semibold text-secondary">{index + 1}.</span>
+              <span className="font-mono text-xs font-semibold text-secondary">
+                {index + 1}.
+              </span>
               <span>{note}</span>
             </li>
           ))}
